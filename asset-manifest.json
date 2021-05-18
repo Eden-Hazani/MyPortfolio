@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/MyPortfolio/static/css/main.9b2270b1.chunk.css",
+    "main.js": "/MyPortfolio/static/js/main.352bdc96.chunk.js",
+    "main.js.map": "/MyPortfolio/static/js/main.352bdc96.chunk.js.map",
+    "runtime-main.js": "/MyPortfolio/static/js/runtime-main.55286d6b.js",
+    "runtime-main.js.map": "/MyPortfolio/static/js/runtime-main.55286d6b.js.map",
+    "static/js/2.080612a1.chunk.js": "/MyPortfolio/static/js/2.080612a1.chunk.js",
+    "static/js/2.080612a1.chunk.js.map": "/MyPortfolio/static/js/2.080612a1.chunk.js.map",
+    "index.html": "/MyPortfolio/index.html",
+    "static/css/main.9b2270b1.chunk.css.map": "/MyPortfolio/static/css/main.9b2270b1.chunk.css.map",
+    "static/js/2.080612a1.chunk.js.LICENSE.txt": "/MyPortfolio/static/js/2.080612a1.chunk.js.LICENSE.txt",
+    "static/media/headText.css": "/MyPortfolio/static/media/Montserrat-MediumItalic.54b24d99.ttf",
+    "static/media/welcomeRows.css": "/MyPortfolio/static/media/Montserrat-LightItalic.d79f80a4.ttf",
+    "static/media/aboutStyles.css": "/MyPortfolio/static/media/ShareTechMono-Regular.8b302ac6.ttf"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.55286d6b.js",
+    "static/js/2.080612a1.chunk.js",
+    "static/css/main.9b2270b1.chunk.css",
+    "static/js/main.352bdc96.chunk.js"
+  ]
+}
