@@ -1,0 +1,99 @@
+.dnCreateProjectClick{
+    animation: dnCreateClick .7s forwards;
+    animation-delay: 8s;
+    width: fit-content !important;
+    display: flex !important;
+    z-index: 20;
+}
+
+@keyframes dnCreateClick{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(.8);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.headerTxt{
+    font-size: 60px;
+    text-align: center;
+    color: white;
+}
+
+.homeContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+
+.containingRow{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width: 600px) {
+    .aboutTxt {
+        margin-bottom: 15px;
+    }
+    .dnCreateAboutContainer{
+        margin-left: 5.5% !important;
+    }
+  }
+
+
+  .dnCreateAboutContainer{
+    margin-left: 5%;
+    position: relative;
+}
+
+
+  
+.homeMeMouseClick{
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    top: 1000px;
+    left: 150px;
+    animation: aboutMouseMove 1.5s forwards;
+    animation-delay: 8s;
+    z-index: 1;
+}
+
+
+
+
+
+@keyframes aboutMouseMove {
+    0%  {
+        top: 600px; 
+         opacity: 0;
+    }
+    25% { 
+        top: 0px; 
+        opacity: 1;
+    }
+    50%{
+        transform: scale(.8);
+        top: 0px;
+        opacity: 1;
+    }
+    75%{
+        transform: scale(1);
+        top: 0px;
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1);
+        top: 0px;
+        visibility:hidden;
+        display:none;
+    }
+  }

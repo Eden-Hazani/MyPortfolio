@@ -1,0 +1,27 @@
+.backIcon{
+    width: 30px;
+    height: 30px;
+    color: rgb(041 , 225, 140);
+    position: absolute;
+    top:10px;
+    left: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.terminalIcon{
+    width: 30px;
+    height: 30px;
+    color: rgb(041 , 225, 140);
+}
+
+.toTerminalIcon{
+    display: flex;
+    color: rgb(041 , 225, 140);
+    position: absolute;
+    top:5px;
+    right: 10px;
+    cursor: pointer;
+    z-index: 10;
+    align-items: center;
+}

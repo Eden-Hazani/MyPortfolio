@@ -1,0 +1,169 @@
+.openingRow{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 25px;
+}
+
+.centerOpenWords{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.regularTxt{
+    color: white;
+    font-size: 3.5vh;
+    font-family: monoBold;
+}
+
+@media screen and (max-width: 600px) {
+    .regularTxt{
+        font-size: 3vh;
+    }
+  }
+
+
+
+@keyframes returnOpacityJumpingLeft{
+    0%{
+        opacity: 0;
+        left: -50px;
+    }
+    25%{
+        left: -30px;
+        opacity: 1;
+    }
+    50%{
+        left: -50px;
+        opacity: 1;
+    }
+    100%{
+        left: -30px;
+        opacity: 1;
+    }
+}
+
+@keyframes returnOpacityJumpingRight{
+    0%{
+        opacity: 0;
+        right: -40px;
+    }
+    25%{
+        right: -30px;
+        opacity: 1;
+    }
+    50%{
+        right: -50px;
+        opacity: 1;
+    }
+    100%{
+        right: -30px;
+        opacity: 1;
+    }
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url('../../assets/fonts/Montserrat-LightItalic.ttf');
+  }
+
+/* ------------------------------------------------------------------------- */
+
+
+
+.welcomeOpen{
+    color: white;
+    position: relative;
+    animation: colorWelcome 1.5s forwards;
+    animation-delay: 1.3s;
+}
+
+.jsOpenLogo{
+    position: absolute;
+    left: -40px;
+    animation: returnOpacityJumpingLeft 1s forwards;
+    animation-delay: 1.3s;
+    opacity: 0;
+}
+
+@keyframes colorWelcome{
+    from{
+        color: white;
+        left: 0px;
+    }
+    to{
+        text-shadow: -2px -2px #bdc025, -2px -2px rgb(189, 172, 44);
+
+
+        /* color: #f7df1e; */
+        left: 8px;
+    }
+}
+
+/* ------------------------------------------------------------------------- */
+
+
+.imOpen{
+    color: white;
+    position: relative;
+    animation: colorIm 1.5s forwards;
+    animation-delay: 1s;
+}
+
+.nodeOpenLogo{
+    position: absolute;
+    right: -40px;
+    animation: returnOpacityJumpingRight 1s forwards;
+    animation-delay: 1s;
+    opacity: 0;
+}
+
+@keyframes colorIm{
+    from{
+        color: white;
+        right: 0px;
+    }
+    to{
+        text-shadow: -2px -2px #76af21, -2px -2px  #548013;
+
+        /* color: #8cc03e; */
+        right: 8px;
+    }
+}
+
+
+
+/* ------------------------------------------------------------------------- */
+
+.reduxOpenLogo{
+    position: absolute;
+    left: -40px;
+    animation: returnOpacityJumpingLeft 1s forwards;
+    animation-delay: .7s;
+    opacity: 0;
+}
+
+.myNameOpen{
+    color: white;
+    position: relative;
+    animation: colorMyName .5s forwards;
+    animation-delay: .7s;
+}
+
+
+@keyframes colorMyName{
+    from{
+        color: white;
+        left: 0px;
+    }
+    to{
+        text-shadow: -2px -2px  #8b69c0, -3px -3px  #8e64d1;
+        left: 10px;
+    }
+}
+
+
+/* ------------------------------------------------------------------------- */
+

@@ -1,0 +1,40 @@
+.linkingLogo{
+    width: 5vh;
+    height: 5vh;
+    margin: 8px;
+}
+
+.linkingContainer{
+    position: relative;
+    left: 700px;
+    display: flex;
+    flex-direction: column;
+    animation: IconEntrance 1s forwards;
+    animation-delay: 1s;
+}
+
+.linkingLogo:hover{
+    cursor: pointer;
+    animation: clickLinkIcon 1s forwards;
+}
+
+@keyframes IconEntrance{
+    0%{
+        left: 700px;
+    }
+    100%{
+        left: 0px;
+    }
+}
+
+@keyframes clickLinkIcon{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(.8);
+    }
+    100%{
+        transform: scale(1);
+    }
+}

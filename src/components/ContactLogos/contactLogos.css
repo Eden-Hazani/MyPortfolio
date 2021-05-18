@@ -1,0 +1,32 @@
+.contactLogos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: moveIcons 1s forwards;
+    animation-delay: 3s;
+    position: absolute;
+    transform: rotate(30deg);
+    left: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    right: 0;
+    opacity: 0;
+    width: 50%;
+    margin: auto;
+}
+
+.contactLogos>*{
+    margin: 15px;
+}
+
+@keyframes moveIcons {
+    from{
+        opacity: 0;
+        transform: rotate(30deg);
+        left: 40%;
+    }to{
+        opacity: 1;
+        transform: rotate(0deg);
+        left: 0px;
+    }
+}

@@ -1,0 +1,48 @@
+.container{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-left: 5%;
+}
+
+.headText{
+    font-family: 'fallout';
+    color: rgb(041 , 225, 140);
+    font-size: 5vh;
+    text-shadow: 0 0 15px rgb(041 , 225, 140), 0 0 10px rgb(041 , 225, 140), -20px -27px 3px rgba(206,89,55,0);
+}
+
+.dncreateContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1%;
+    width: 100%;
+    flex:1;
+    position: relative;
+
+}
+
+.dnCreateTxt{
+    font-family: 'fallout';
+    color: rgb(041 , 225, 140);
+    font-size: 2.5vh;
+    text-shadow: 0 0 15px rgb(041 , 225, 140), 0 0 10px rgb(041 , 225, 140), -20px -27px 3px rgba(206,89,55,0);
+    letter-spacing: 3.5px;
+    line-height: 30px;
+}
+
+.txtContainerDiv{
+    margin-left: 5%;
+}
+
+
+.dncreateInnerContainer{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+
+

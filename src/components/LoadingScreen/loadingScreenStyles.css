@@ -1,0 +1,37 @@
+.loading{
+    font-family: 'fallout';
+    color: rgb(041 , 225, 140);
+    font-size: 4vh;
+    text-shadow: 0 0 15px rgb(041 , 225, 140), 0 0 10px rgb(041 , 225, 140), -20px -27px 3px rgba(206,89,55,0);
+    letter-spacing: 3.5px;
+    line-height: 30px;
+    margin-left: 10%;
+    margin-top: 5%;
+
+}
+
+.loadingTxt{
+    font-family: 'fallout';
+    color: rgb(041 , 225, 140);
+    font-size: 2vh;
+    text-shadow: 0 0 15px rgb(041 , 225, 140), 0 0 10px rgb(041 , 225, 140), -20px -27px 3px rgba(206,89,55,0);
+    letter-spacing: 3.5px;
+    line-height: 30px;
+    margin-left: 10%;
+    margin-top: 5%;
+}
+
+.textFall{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    animation: loadingTextFall 1.5s ease-out ;
+}
+
+@keyframes loadingTextFall {
+    0%  { top: 0px}
+    100% { top: 2000px}
+  }
+
+

@@ -1,0 +1,110 @@
+.aboutContainer{
+    transform: rotate(35deg);
+    left: 160%;
+    top: 160%;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    position: relative;
+    animation: launchAbout forwards ease-in-out;
+    animation-duration: 1.5s;
+    animation-delay: 1s;
+    z-index: 50;
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    flex-direction: column;
+    overflow-y: auto;
+    opacity: 0;
+}
+
+.aboutEndParagraph>p{
+    margin: 15px;
+}
+
+.aboutEndParagraph:hover{
+    cursor: pointer;
+}
+
+.aboutBack{
+    color: rgb(77, 77, 77);
+    width: 30px;
+    height: 30px;
+}
+
+.aboutEndParagraph{
+    font-family: Montserrat;
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    margin-top: 150px;
+    font-size: 2.6vh;
+    background-color: #9e7dd1;
+    border-radius: 15px;
+    border: 1.5px black solid;
+
+}
+
+.aboutText{
+    position: absolute;
+    top: 150px;
+    width: 50%;
+    left: 40px;
+}
+
+.aboutTextBody{
+    width: 80%;
+}
+
+.aboutTextParagraph{
+    font-family: Montserrat;
+    font-size: 2vh;
+}
+
+.aboutHeader{
+    font-family: monoBold;
+    color: rgb(77, 77, 77);
+    font-size: 3.5vh;
+    text-align: center;
+}
+
+@keyframes launchAbout {
+    from{
+        opacity: 0;
+        left: 160%;
+        top: 160%;
+        transform: rotate(35deg);
+    }to{
+        opacity: 1;
+        left: 0px;
+        top: 0px;
+        transform: rotate(0deg);
+    }
+}
+
+
+
+.txtWrapper{
+    position: relative;
+    width: 90%;
+}
+
+.mainHeader{
+    font-family: 'fallout';
+    color: rgb(041 , 225, 140);
+    font-size: 4vh;
+    text-shadow: 0 0 15px rgb(041 , 225, 140), 0 0 10px rgb(041 , 225, 140), -20px -27px 3px rgba(206,89,55,0);
+    margin-left: 1%;
+}
+
+@font-face {
+    font-family: OpenSans-Light;
+    src: url('../../assets/fonts/OpenSans-Light.ttf');
+  }
+
+@font-face {
+    font-family: fallout;
+    src: url('../../assets/fonts/ShareTechMono-Regular.ttf');
+  }

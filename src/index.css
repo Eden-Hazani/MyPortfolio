@@ -1,0 +1,101 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(86, 145, 255);
+  overflow: hidden;
+}
+
+html{
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+.flashBar{
+  animation: flashBarBlink .5s ease-out infinite;
+  font-family: 'fallout';
+  color: rgb(041 , 225, 140);
+  font-size: 3.5vh;
+  text-shadow: 0 0 15px rgb(041 , 225, 140), 0 0 10px rgb(041 , 225, 140), -20px -27px 3px rgba(206,89,55,0);
+  letter-spacing: 3.5px;
+  line-height: 30px;
+}
+
+.purpleTxt{
+  font-family: 'fallout';
+  color: rgb(197, 125, 238);
+  font-size: 2.3vh;
+  letter-spacing: 2.5px;
+  text-shadow: 0 0 15px rgb(160, 44, 228), 0 0 10px rgb(119, 19, 177), -20px -27px 3px rgba(206,89,55,0);
+}
+
+
+.flashBarPurple{
+  animation: flashBarBlink .5s ease-out infinite;
+  font-family: 'fallout';
+  color: rgb(193, 102, 235);
+  font-size: 3.5vh;
+  text-shadow: 0 0 15px rgb(186, 71, 221), 0 0 10px rgb(176, 88, 211), -20px -27px 3px rgba(206,89,55,0);
+  letter-spacing: 3.5px;
+  line-height: 30px;
+}
+
+@keyframes flashBarBlink {
+  0%  {  opacity: 0;}
+  100% {  opacity: 1;}
+}
+
+
+.txt{
+  font-family: 'fallout';
+  color: rgb(041 , 225, 140);
+  font-size: 2.5vh;
+  text-shadow: 0 0 15px rgb(041 , 225, 140), 0 0 10px rgb(041 , 225, 140), -20px -27px 3px rgba(206,89,55,0);
+  letter-spacing: 1.5px;
+  line-height: 30px;
+}
+
+@media screen and (max-width: 600px) {
+  .txt{
+    letter-spacing: 1px;
+    line-height: normal;
+    }
+  .purpleTxt{
+    letter-spacing: 1px;
+    line-height: normal;
+  }
+}
+
+
+.typeWriterImgDiv{
+  align-items: center;
+    display: flex;
+}
+
+.terminalButton{
+  font-family: 'fallout';
+  color: rgb(041 , 225, 140);
+  font-size: 2.5vh;
+  text-shadow: 0 0 15px rgb(041 , 225, 140), 0 0 10px rgb(041 , 225, 140), -20px -27px 3px rgba(206,89,55,0);
+  letter-spacing: 1.5px;
+  line-height: 30px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.terminalButton:hover{
+  background-color: rgb(041 , 225, 140);
+  color: black;
+  animation: buttonHover 1s ease-out alternate infinite;
+}
+
+@keyframes buttonHover {
+  0%  {  opacity: .4;}
+  100% {  opacity: 1;}
+}

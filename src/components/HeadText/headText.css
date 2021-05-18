@@ -1,0 +1,127 @@
+.frontIcon{
+    width: 50px;
+    height: 50px;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    animation: jumpBottomArrow .5s infinite alternate;
+}
+
+.backGroundTxt{
+    position: absolute;
+    bottom: 10px;
+}
+
+.backGroundTxt>p{
+    font-size: 100vh;
+    color: white;
+    transform: rotate(8deg);
+    font-family: lobster;
+    opacity: .1;
+    margin: 0px;
+}
+
+@media screen and (max-width: 600px) {
+    .backGroundTxt>p{
+        font-size: 30vh;
+    }
+    .backGroundTxt{
+        bottom: 400px;
+    }
+  }
+
+
+.headerContainer{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-top: 100px;
+    position: relative;
+}
+
+.startRowContainer{
+    display: flex;
+    flex-direction: row;
+    flex: .5;
+    margin-left: 40%;
+    align-content: center;
+    align-items: center;
+    justify-content: space-around;
+}
+
+@media screen and (max-width: 600px) {
+    .startRowContainer {
+        margin-left: 0px;
+        width: 100% !important;
+        align-items: baseline;
+    }
+    .canvasWrapper{
+        display: none;
+    }
+  }
+
+  .canvasWrapper{
+    padding: 0;
+    margin: auto;
+    display: block;
+ 
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+.learnMore{
+    font-family: monoBold;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    z-index: 20;
+    position: relative;
+    bottom: -20%;
+    animation: learnMoreAni 1s forwards;
+    text-shadow:-2px -2px  #364aff, -3px -3px  #364aff;
+}
+
+@font-face {
+    font-family: lobster;
+    src: url('../../assets/fonts/Lobster-Regular.ttf');
+  }
+
+@font-face {
+    font-family: monoBold;
+    src: url('../../assets/fonts/Montserrat-MediumItalic.ttf');
+  }
+
+
+@keyframes jumpBottomArrow{
+    0%{
+        top: 110%;
+    }
+    100%{
+        top: 120%;
+    }
+
+}
+
+
+@keyframes learnMoreAni{
+    0%{
+        bottom: -20%;
+        opacity: 0;
+    }
+    25%{
+        bottom: 8%;
+        opacity: 1;
+    }
+    50%{
+        bottom: 5%;
+    }
+    100%{
+        bottom: 8%;
+    }
+}
