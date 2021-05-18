@@ -25,11 +25,11 @@ export function SkySurfProject() {
 
     const startBottomType = async () => {
         await typeWriterEffect('includedTech = {', 'flashBar', 'txt', 20, 220, (val) => changeDeepState(setLowerTextBody, 'firstRow', val));
-        await typeWriterImageEffect('React: ', '/imgs/logos/react.svg', 'txt', 'flashBar', 20, (val) => changeDeepState(setLowerTextBody, 'secondRow', val))
-        await typeWriterImageEffect('Redux: ', '/imgs/logos/redux.svg', 'txt', 'flashBar', 20, (val) => changeDeepState(setLowerTextBody, 'thirdRow', val))
-        await typeWriterImageEffect('MySQL: ', '/imgs/logos/mySql.svg', 'txt', 'flashBar', 20, (val) => changeDeepState(setLowerTextBody, 'fourthRow', val))
-        await typeWriterImageEffect('SocketIO: ', '/imgs/logos/socketIO.svg', 'txt', 'flashBar', 20, (val) => changeDeepState(setLowerTextBody, 'fifthRow', val))
-        await typeWriterImageEffect('NodeJs: ', '/imgs/logos/nodeJS.svg', 'txt', 'flashBar', 20, (val) => changeDeepState(setLowerTextBody, 'sixthRow', val))
+        await typeWriterImageEffect('React: ', 'imgs/logos/react.svg', 'txt', 'flashBar', 20, (val) => changeDeepState(setLowerTextBody, 'secondRow', val))
+        await typeWriterImageEffect('Redux: ', 'imgs/logos/redux.svg', 'txt', 'flashBar', 20, (val) => changeDeepState(setLowerTextBody, 'thirdRow', val))
+        await typeWriterImageEffect('MySQL: ', 'imgs/logos/mySql.svg', 'txt', 'flashBar', 20, (val) => changeDeepState(setLowerTextBody, 'fourthRow', val))
+        await typeWriterImageEffect('SocketIO: ', 'imgs/logos/socketIO.svg', 'txt', 'flashBar', 20, (val) => changeDeepState(setLowerTextBody, 'fifthRow', val))
+        await typeWriterImageEffect('NodeJs: ', 'imgs/logos/nodeJS.svg', 'txt', 'flashBar', 20, (val) => changeDeepState(setLowerTextBody, 'sixthRow', val))
         await typeWriterEffect('}', 'flashBar', 'txt', 20, 220, (val) => changeDeepState(setLowerTextBody, 'seventhRow', val), true);
     }
 

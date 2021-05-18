@@ -45,7 +45,7 @@ export function PhotoBar(props) {
                         {headline.secondRow}
                     </div>
                     <div className="tutorialImgInnerContainer">
-                        <img src={'/imgs/logos/mouseClick.svg'} width={50} height={50} alt={'mouseClick'} className="mouseClickImg" />
+                        <img src={'imgs/logos/mouseClick.svg'} width={50} height={50} alt={'mouseClick'} className="mouseClickImg" />
                         <img onClick={() => handleClick()} className="photoGalleryImage" src={list[props.imagePicked].img1} width={250} height={450} alt="dncreate1" />
                     </div>
                 </div>}

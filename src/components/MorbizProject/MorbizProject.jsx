@@ -24,9 +24,9 @@ export function MorbizProject() {
 
     const startBottomType = async () => {
         await typeWriterEffect('includedTech = {', 'flashBar', 'txt', 20, 220, (val) => changeDeepState(setLowerTextBody, 'firstRow', val));
-        await typeWriterImageEffect('React: ', '/imgs/logos/react.svg', 'txt', 'flashBar', 20, (val) => changeDeepState(setLowerTextBody, 'secondRow', val))
-        await typeWriterImageEffect('Redux: ', '/imgs/logos/redux.svg', 'txt', 'flashBar', 20, (val) => changeDeepState(setLowerTextBody, 'thirdRow', val))
-        await typeWriterImageEffect('Bootstrap: ', '/imgs/logos/bootstrap.svg', 'txt', 'flashBar', 20, (val) => changeDeepState(setLowerTextBody, 'fourthRow', val))
+        await typeWriterImageEffect('React: ', 'imgs/logos/react.svg', 'txt', 'flashBar', 20, (val) => changeDeepState(setLowerTextBody, 'secondRow', val))
+        await typeWriterImageEffect('Redux: ', 'imgs/logos/redux.svg', 'txt', 'flashBar', 20, (val) => changeDeepState(setLowerTextBody, 'thirdRow', val))
+        await typeWriterImageEffect('Bootstrap: ', 'imgs/logos/bootstrap.svg', 'txt', 'flashBar', 20, (val) => changeDeepState(setLowerTextBody, 'fourthRow', val))
         await typeWriterEffect('}', 'flashBar', 'txt', 20, 220, (val) => changeDeepState(setLowerTextBody, 'fifthRow', val), true);
     }
 

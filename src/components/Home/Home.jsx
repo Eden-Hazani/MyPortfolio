@@ -73,7 +73,7 @@ export function Home(props) {
                     <br />
                     <div className="dnCreateAboutContainer">
                         <div onClick={() => handleClick()} className={`${!isAboutTutorial?.aboutClick && 'dnCreateProjectClick'}`}>{lowerTextBody.secondRow}</div>
-                        {!isAboutTutorial?.aboutClick && <img src={'/imgs/logos/mouseClick.svg'} width={50} height={50} alt={'mouseClick'} className="homeMeMouseClick" />}
+                        {!isAboutTutorial?.aboutClick && <img src={'imgs/logos/mouseClick.svg'} width={50} height={50} alt={'mouseClick'} className="homeMeMouseClick" />}
                     </div>
                     <br />
                     <div className="dnCreateAboutContainer">
