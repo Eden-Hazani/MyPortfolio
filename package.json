@@ -2,7 +2,7 @@
   "name": "portfolio2.0",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://Eden-Hazani.github.io/MyPortfolio",
+  "homepage": "https://eden-hazani.github.io/MyPortfolio/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.12.0",
     "@testing-library/react": "^11.2.6",
