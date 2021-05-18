@@ -37,7 +37,7 @@ function App() {
 
       </div>
       { startLoadTerminal &&
-        <div ref={scrollerTerminal} className="terminalScreen" style={{ height: window.innerHeight, backgroundImage: `url(${process.env.PUBLIC_URL}imgs/backgrounds/pleaseStandBy.jpg)` }}>
+        <div ref={scrollerTerminal} className="terminalScreen" style={{ height: window.innerHeight, backgroundImage: `url(${process.env.PUBLIC_URL}/imgs/backgrounds/pleaseStandBy.jpg)` }}>
           {terminalActive ?
             <Terminal
               isViewable={terminalActive}
