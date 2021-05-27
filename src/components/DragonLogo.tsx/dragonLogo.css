@@ -1,0 +1,55 @@
+.dragonImg{
+    z-index: 5;
+    width: 70%;
+    height: 70%;
+}
+
+.dragonImgCont{
+    transform: scale(.8);
+    width: 60%;
+    height: 60%;
+    position: relative;
+    opacity: 0;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 150px;
+}
+
+@media screen and (max-width: 600px) {
+    .dragonImgCont{
+        width: 70%;
+        height: 45%;
+        margin-top: 0px;
+    }
+  }
+
+
+.enterDragon{
+    animation: enterD 1s forwards;
+    animation-delay: .3s;
+}
+
+.leaveDragon{
+    animation: exitD 1s forwards;
+}
+
+@keyframes enterD{
+    from{
+        opacity: 0;
+        transform: scale(.8);
+    }to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+@keyframes exitD{
+    from{
+        opacity: 1;
+        transform: scale(1);
+    }to{
+        opacity: 0;
+        transform: scale(.8);
+    }
+}

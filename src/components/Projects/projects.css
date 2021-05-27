@@ -1,0 +1,394 @@
+.projectMainContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    width: 50%;
+    background-color: #34A0A4;
+    padding-bottom: 3%;
+}
+
+.chosenProjectContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.d20Dice{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: -20%;
+    right: 0;
+    top: -90%;
+    opacity: 0;
+    transform: rotate(12deg);
+}
+
+.d20Container{
+    position: absolute;
+    width: 38%;
+    height: 89%;
+    margin-left: auto;
+    margin-right: auto;
+    left: -20%;
+    right: 0;
+    animation: d20Movement 1s infinite alternate;
+    animation-delay: .5s;
+}
+
+.dnCreateProjectContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    position: relative;
+    cursor: pointer;
+}
+
+.constructionDragon{
+    transform: scaleX(-1);
+    width: 20%;
+    height: 150%;
+    left: 8%;
+    position: relative;
+    padding-bottom: 10%;
+    opacity: 0;
+    
+   
+}
+
+.enterConstructionDragon{
+    animation: enterConstDragon 1s forwards;
+}
+
+.closeConstructionDragon{
+    animation: closeConstDragon 1s forwards;
+}
+
+.dncreateHeadLine>span{
+    color: white;
+    font-size: 8vh;
+    font-family: monoBold;
+}
+
+@media screen and (max-width: 600px) {
+    .dncreateHeadLine>span{
+        font-size: 6vh;
+    }
+    .constructionDragon{
+        width: 25%;
+    }
+    .skySurfProjectContainer{
+        right: 10%;
+    }
+    .morbizProjectContainer{
+        left: 10%;
+    }
+    .skySurfHeadLine{
+        font-size: 6vh !important;
+    }
+    .deceitDragon{
+        width: 60% !important;
+        top: -30% !important;
+    }
+  }
+  
+
+
+.dncreateHeadLine{
+    position: relative;
+    transform: scale(.8);
+    opacity: 0;
+    text-shadow: 0px 2px 2px #000000;
+}
+
+.deceitDragon{
+    position: absolute;
+    top: 10%;
+    left: 0%;
+    cursor: pointer;
+    width: 17%;
+    height: auto;
+}
+
+.deceitDragonEnter{
+    animation: deceitDragonEnter 1s forwards;
+}
+
+.deceitDragonLeave{
+    animation: deceitDragonLeave 1s forwards;
+}
+
+@keyframes deceitDragonEnter{
+    from{
+        opacity: 0;
+        left: -5%;
+    }to{
+        opacity: 1;
+        left: 0%;
+    }
+}
+@keyframes deceitDragonLeave{
+    from{
+        opacity: 1;
+        left: 0%;
+    }to{
+        opacity: 0;
+        left: -5%;
+    }
+}
+
+.enterDncreateHeadLine{
+    animation: openLearn 1s forwards;
+}
+.closeDnCreateHeadLine{
+    animation: closeLearn 1s forwards;
+}
+
+.dncreateColorify{
+    animation: orangeColorify .5s forwards;
+    animation-delay: 1s;
+}
+
+.dncreateRemoveColorify{
+    animation: orangeRemoveColorify 1s forwards;
+}
+
+.enterD20{
+    animation: enterD20 1s forwards;
+    animation-delay: 1s;
+
+}
+.closeD20{
+    animation: closeD20 1s forwards;
+
+}
+
+
+.skySurfHeadLine{
+    color: white;
+    font-size: 8vh;
+    font-family: monoBold;
+    text-shadow: 0px 2px 2px #000000;
+}
+
+.plane{
+    width: 90%;
+    height: 90%;
+    position: absolute;
+    padding-bottom: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    left: 85%;
+    right: 0;
+    bottom: 30%;
+}
+
+.cloud{
+    width: 90%;
+    height: 90%;
+    position: absolute;
+    padding-bottom: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    left: -100%;
+    right: 0;
+    bottom: 0%;
+    z-index: -1;
+}
+
+.skySurfProjectContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    position: relative;
+    cursor: pointer;
+}
+
+
+.enterSkySurfProject{
+    animation: enterSkySurf 1s forwards;
+}
+
+.closeSkySurfProject{
+    animation: closeSkySurf 1s forwards;
+}
+
+.skySurfMovement{
+    animation: skySurfMovement 1s infinite alternate;
+    animation-delay: 1s;
+    transform: scale(.96);
+    position: relative;
+}
+
+
+.dragonChef{
+    width: 90%;
+    height: 90%;
+    position: absolute;
+    padding-bottom: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    right: 90%;
+    bottom: 20%;
+}
+
+.morbizProjectContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    position: relative;
+    cursor: pointer;
+}
+
+.burger{
+    width: 25%;
+    height: 50%;
+    position: absolute;
+    padding-bottom: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    left: 85%;
+    bottom: 33%;
+    animation: burgerMovement 1s alternate infinite;
+}
+
+
+@keyframes burgerMovement{
+    from{
+        bottom: 33%;
+        transform: scale(.87);
+    }
+    to{
+        transform: scale(1);
+        bottom: 40%;
+    }
+}
+
+
+
+@keyframes d20Movement{
+    from{
+        top: 3%;
+        transform: scale(.87);
+    }
+    to{
+        transform: scale(1);
+        top: -10%;
+    }
+}
+
+
+@keyframes skySurfMovement{
+    from{
+      left: 0%;
+      transform: scale(.96);
+    }
+    to{
+        transform: scale(1);
+        left: 5%;
+    }
+}
+
+
+@keyframes enterSkySurf{
+    from{
+        transform: scale(.8);
+        opacity: 0;
+    }
+    to{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes closeSkySurf{
+    from{
+        transform: scale(1);
+        opacity: 1;
+    }
+    to{
+        transform: scale(.8);
+        opacity: 0;
+    }
+}
+
+
+
+
+@keyframes enterD20{
+    from{
+        top: -90%;
+        opacity: 0;
+    }
+    to{
+        top: -73%;
+        opacity: 1;
+    }
+}
+
+@keyframes closeD20{
+    from{
+        top: -73%;
+        opacity: 1;
+    }
+    to{
+        top: -90%;
+        opacity: 0;
+    }
+}
+
+
+
+
+@keyframes enterConstDragon{
+    from{
+        left: 8%;
+        opacity: 0;
+    }
+    to{
+        left: -5%;
+        opacity: 1;
+    }
+}
+
+@keyframes closeConstDragon{
+    from{
+        left: -5%;
+        opacity: 1;
+    }
+    to{
+        left: 8%;
+        opacity: 0;
+    }
+}
+
+
+
+
+
+
+@keyframes orangeRemoveColorify{
+    from{
+        color: #F76C5E;
+    }
+    to{
+        color: white ;
+    }
+}
+
+
+@keyframes orangeColorify{
+    from{
+        color: white;
+    }
+    to{
+        color: #F76C5E ;
+    }
+}

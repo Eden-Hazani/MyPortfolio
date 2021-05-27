@@ -4,16 +4,26 @@ import { About } from "../About/About";
 import { LoadingScreen } from "../LoadingScreen/LoadingScreen";
 import { FaPowerOff, FaChevronRight } from "react-icons/fa";
 import './terminalStyles.css'
-import { DnCreateProject } from "../DnCreateProject/DnCreateProject";
 import { TurnOff } from "../TurnOff/TurnOff";
 import { SkySurfProject } from "../SkySurfProject/SkySurfProject";
 import { Home } from "../Home/Home";
 import { MorbizProject } from "../MorbizProject/MorbizProject";
+import { DnCreateProject } from "../DnCreateProject/DnCreateProject";
 
 export function Terminal(props) {
     const [currentTerminal, setCurrentTerminal] = useState('TERMINAL')
-    const [loading, setLoading] = useState(false)
+    const [terminalStatus, setTerminalStatus] = useState('terminalOpening')
+    const [loading, setLoading] = useState(true)
     const [turnOff, setTurnOff] = useState(false)
+    const terminalRef = useRef(null)
+
+    useEffect(() => {
+        setTimeout(() => {
+            setLoading(false)
+        }, 2000);
+    }, [])
+
+
 
     const screenSwitch = (value) => {
         setLoading(true)
@@ -23,12 +33,22 @@ export function Terminal(props) {
         }, 1500);
     }
 
+    useEffect(() => {
+        if (props.isTerminal) {
+            terminalRef.current.scrollIntoView({ behavior: 'smooth' });
+        }
+    }, [props])
 
     const handleTerminalClick = () => screenSwitch("TERMINAL");
 
     return (
-        <div style={{ height: window.innerHeight }}>
-            {turnOff ? <TurnOff close={() => props.scroll()} /> :
+        <div ref={terminalRef} className={`terminal ${terminalStatus}`} style={{ height: window.innerHeight, backgroundImage: `url(${process.env.PUBLIC_URL}/imgs/backgrounds/pleaseStandBy.jpg)` }} >
+            {turnOff ? <TurnOff closeTerminal={() => {
+                setTerminalStatus('terminalClosing')
+                setTimeout(() => {
+                    props.closeTerminal()
+                }, 1800);
+            }} /> :
                 loading ? <LoadingScreen /> :
                     <div style={{ position: 'relative', height: window.innerHeight }}>
                         <FaPowerOff onClick={() => {
@@ -41,7 +61,6 @@ export function Terminal(props) {
                             </div>
                         }
                         {currentTerminal === 'TERMINAL' && <Home switch={(value) => screenSwitch(value)} />}
-                        {currentTerminal === 'ABOUT' && <About switch={(value) => screenSwitch(value)} />}
                         {currentTerminal === 'DNCREATE' && <DnCreateProject />}
                         {currentTerminal === 'SKYSURF' && <SkySurfProject />}
                         {currentTerminal === 'MORBIZ' && <MorbizProject />}

@@ -1,0 +1,117 @@
+
+.enterDragonRoll0{
+    animation: dragonRollEnter0 1s forwards;
+}
+
+.enterDragonRoll1{
+    animation: dragonRollEnter1 1s forwards;
+    animation-delay: .7s;
+}
+
+.enterDragonRoll2{
+    animation: dragonRollEnter2 1s forwards;
+    animation-delay: 1.2s;
+}
+
+@media screen and (max-width: 600px) {
+    .smallBubbleLine{
+        width: 27vh !important;
+        height: 12vh !important;
+    }
+}
+
+.smallBubble{
+    position: absolute;
+    right: 35%;
+    top: 6%;
+    border-radius: 100%;
+    width: 3.5vh; 
+    transform: rotate(25deg);
+    height: 3.5vh;  
+    background-color: rgb(255, 255, 255);
+}
+
+.smallBubbleLine{
+    position: absolute;
+    right: -5%;
+    top: 25%;
+    width: 25vh; 
+    height: 10vh;  
+    border: solid 5px rgb(255, 255, 255);
+    transform: rotate(62deg) ;
+    border-color: rgb(255, 255, 255) transparent transparent transparent;
+    border-radius: 50%/100px 100px 0 0;
+}
+
+.leaveDragonRoll0{
+    animation:dragonRollLeave0 1s forwards;
+}
+
+.leaveDragonRoll1{
+    animation: dragonRollLeave1 1s forwards;
+    animation-delay: .5s;
+}
+
+.leaveDragonRoll2{
+    animation: dragonRollLeave2 1s forwards;
+    animation-delay: 1s;
+}
+
+
+
+
+@keyframes dragonRollEnter0{
+    from{
+        transform:  rotate(-35deg);
+    }
+    to{
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes dragonRollEnter1{
+    from{
+        transform:  rotate(45deg);
+    }
+    to{
+        transform:  rotate(0deg);
+    }
+}
+
+@keyframes dragonRollEnter2{
+    from{
+        transform: rotate(-45deg);
+    }
+    to{
+        transform:  rotate(0deg);
+    }
+}
+
+
+
+@keyframes dragonRollLeave0{
+    from{
+        transform:  rotate(0deg);
+    }
+    to{
+        transform:  rotate(-35deg);
+    }
+}
+
+@keyframes dragonRollLeave1{
+    from{
+        transform:  rotate(0deg);
+    }
+    to{
+        transform:  rotate(45deg);
+    }
+}
+
+@keyframes dragonRollLeave2{
+    from{
+        transform:  rotate(0deg);
+    }
+    to{
+        transform:  rotate(-45deg);
+    }
+}

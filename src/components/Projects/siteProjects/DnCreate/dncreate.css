@@ -1,0 +1,434 @@
+.dncreateMainContainer{
+    overflow-y: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.dnCreateHeader{
+  transform: scale(.8);
+  opacity: 0;
+}
+
+
+@media screen and (max-width: 600px) {
+  .dncreateGlassShard{
+    width: 50% !important;
+  }
+  .dnCreateFirstSection{
+    top: 5% !important;
+    right: 5% !important;
+    font-size: 3vh !important ;
+  }
+
+  .d20DnCreateProjectContainer{
+    animation: moveD20DnCreateProjectMobile 1s forwards !important;
+  }
+
+  .enterWizardDragon{
+    opacity: 0 !important;
+    animation: none !important;
+  }
+  .leaveWizardDragon{
+    opacity: 0 !important;
+    animation: none !important;
+  }
+  .dncreatePicDesc{
+    font-size: 2.5vh !important;
+  }
+  .photoGalleryImage{
+    width: 40% !important;
+  }
+
+  .dncreateImgContainer{
+    margin-top: 25% !important;
+  }
+  .dncreateEnd{
+    margin-top: 150% !important;
+  }
+}
+
+.dncreateEnd{
+  margin-top: 50%;
+  height: 50%;
+  width: 50%;
+  color: rgb(86, 145, 255);
+}
+
+
+
+.dncreateImgMainContainer{
+  width: 100%;
+  height: 300%;
+}
+
+.dncreateImgContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 25%;
+  margin-top: 10%;
+}
+
+.photoGalleryImage{
+  border-radius: 15px;
+  object-fit: cover;
+  perspective: 500px;
+  transform: translateY(-260px) translateX(-360px) rotate(90deg);
+  opacity: 0;
+  width: 13%;
+  height: auto;
+}
+
+.photoGalleryImageEnter{
+  animation: enterImage 1s forwards;
+}
+
+.photoGalleryImageLeave{
+  animation: leaveImage 1s forwards;
+}
+
+
+.photoGalleryTxtEnter{
+  animation: enterTxt 1s forwards;
+}
+
+.photoGalleryTxtLeave{
+  animation: leaveTxt 1s forwards;
+}
+
+
+@keyframes enterTxt{
+  0%{
+    opacity: 0;
+    transform: translateY(26%) translateX(36%) rotate(-90deg);
+  }
+  50%{
+    opacity: 1;
+    transform: translateY(-10%) translateX(-57%) rotate(30deg);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0%) translateX(0%) rotate(-5deg);
+  }
+}
+@keyframes leaveTxt{
+  from{
+    opacity: 1;
+    transform: translateY(0%) translateX(0%) rotate(-5deg);
+  }
+  to{
+    opacity: 0;
+    transform: translateY(26%) translateX(36%) rotate(-90deg);
+  }
+}
+
+
+
+
+@keyframes enterImage{
+  0%{
+    opacity: 0;
+    transform: translateY(-26%) translateX(-36%) rotate(90deg);
+  }
+  50%{
+    opacity: 1;
+    transform: translateY(10%) translateX(57%) rotate(-30deg);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0%) translateX(0%) rotate(0deg);
+  }
+}
+@keyframes leaveImage{
+  from{
+    opacity: 1;
+    transform: translateY(0%) translateX(0%) rotate(0deg);
+  }
+  to{
+    opacity: 0;
+    transform: translateY(-26%) translateX(-36%) rotate(90deg);
+  }
+}
+
+.wizardDragon{
+  transform: rotate(-5deg);
+  position: absolute;
+  bottom: 7%;
+  opacity: 0;
+  width: 50%;
+  height: 50%;
+  left: -10%;
+}
+
+.enterWizardDragon{
+  animation: enterWizardDragon 1s forwards;
+}
+
+.leaveWizardDragon{
+  animation: leaveWizardDragon 1s forwards;
+}
+
+@keyframes enterWizardDragon{
+  from{
+    opacity: 0;
+  }to{
+    opacity: .8;
+  }
+}
+
+@keyframes leaveWizardDragon{
+  from{
+    opacity: .8;
+  }to{
+    opacity: 0;
+  }
+}
+
+
+
+.dncreatePicDesc{
+  color: white;
+  font-size: 3vh;
+  font-family: monoBold;
+  text-shadow: -2px 2px 1px #000000;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.dncreateImgContainer>div{
+  transform: rotate(-5deg);
+  border-bottom: white 3px solid;
+}
+
+.dncreateGlassShardContainer{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  animation-delay: 1s;
+  opacity: 0;
+  min-height: 70%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.dncreateGlassShard{
+  position: absolute;
+  height: 55%;
+  padding: 10px 20px;
+  font-size: 0px;
+  margin-left: 0px;
+  background-color: rgba(240, 248, 255, 0.37);
+  border: 3px solid #b1cbe554;
+  border-left: 0;
+  transform: skew(80deg, -53deg);
+  z-index: -1;
+  width: 22%;
+  opacity: 0;
+}
+
+.dncreateGlassShardContainerEnter{
+  animation: dncreateGlassShardContainerEnter 1s forwards;
+}
+.dncreateGlassShardContainerLeave{
+  animation: dncreateGlassShardContainerLeave 1s forwards;
+}
+
+.dncreateGlassShardEnter{
+  animation: dncreateGlassShardEnter 1s forwards;
+}
+
+.dncreateGlassShardLeave{
+  animation: dncreateGlassShardLeave 1s forwards;
+}
+
+
+@keyframes dncreateGlassShardEnter{
+  from{
+    transform: skew(80deg, -53deg) scale(.8);
+    opacity: 0;
+  }to{
+    transform: skew(80deg, -53deg) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes dncreateGlassShardLeave{
+  from{
+    transform: skew(80deg, -53deg) scale(1);
+    opacity: 1;
+  }to{
+    transform: skew(80deg, -53deg) scale(.8);
+    opacity: 0;
+  }
+}
+
+
+
+.dnCreateFirstSection>p{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.dnCreateFirstSection{
+    position: absolute;
+    transform: rotate(10deg);
+    color: white;
+    font-size: 3.5vh;
+    font-family: Montserrat;
+    text-shadow: -2px 2px 1px #000000;
+    opacity: 0;
+    margin-left: auto;
+    margin-right: auto;
+    left: 15%;
+    right: 0;
+    top: 30%;
+    bottom: 0;
+}
+
+.dnCreateFirstSectionEnter{
+  animation: dnCreateFirstSectionEnter 1s forwards;
+
+}
+.dnCreateFirstSectionLeave{
+  animation: dnCreateFirstSectionLeave 1s forwards;
+
+}
+
+
+@keyframes dnCreateFirstSectionEnter{
+  from{
+    transform: rotate(0);
+    opacity: 0;
+  }to{
+    transform: rotate(10deg);
+    opacity: 1;
+  }
+}
+
+@keyframes dnCreateFirstSectionLeave{
+  from{
+    transform: rotate(10deg);
+    opacity: 1;
+  }to{
+    transform: rotate(0);
+    opacity: 0;
+  }
+}
+
+.d20DnCreateProjectContainer{
+  width: 150px;
+  height: 150px;
+  position: relative;
+  top: -20%;
+  opacity: 0;
+  animation: moveD20DnCreateProject 1s forwards;
+  animation-delay: .5s;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.d20DnCreateProject{
+  position: absolute;
+  bottom: 0%;
+  animation: rollD20DnCreateProject 2s forwards infinite ;
+}
+
+@keyframes moveD20DnCreateProject{
+  from{
+    top: 0%;
+    left: 0%;
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+    top: 12%;
+    left: 25%;
+  }
+}
+
+@keyframes moveD20DnCreateProjectMobile{
+  from{
+    top: 55%;
+    left: 0%;
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+    top: 65%;
+    left: 25%;
+  }
+}
+
+@keyframes rollD20DnCreateProject{
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dncreateGlassShardContainerEnter{
+  from{
+    right: 0%;
+    opacity: 0;
+  }to{
+    right: 20%;
+    opacity: 1;
+  }
+}
+@keyframes dncreateGlassShardContainerLeave{
+  from{
+    right: 20%;
+    opacity: 1;
+  }to{
+    right: 0%;
+    opacity: 0;
+  }
+}
+
+
+.dnCreateHeader>p{
+  font-family: papaya;
+  font-size: 5vh;
+  text-shadow: -2px 3px 2px #F76C5E;
+  color: white;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.dnCreateHeaderEnter{
+  animation: dncreateHeaderEntrance 1s forwards;
+}
+
+.dnCreateHeaderExit{
+  animation: dncreateHeaderLeave 1s forwards;
+}
+
+@keyframes dncreateHeaderEntrance{
+  from{
+      transform: scale(.8);
+      opacity: 0;
+  }to{
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes dncreateHeaderLeave{
+  from{
+      transform: scale(1);
+      opacity: 1;
+  }to{
+    transform: scale(.8);
+    opacity: 0;
+  }
+}

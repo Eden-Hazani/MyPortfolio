@@ -14,33 +14,51 @@
 
 .regularTxt{
     color: white;
-    font-size: 3.5vh;
+    font-size: 5vh;
+    text-align: center;
     font-family: monoBold;
+}
+
+.welcomeLogoImg{
+    width: 50px;
+    height: 50px;
 }
 
 @media screen and (max-width: 600px) {
     .regularTxt{
         font-size: 3vh;
     }
-  }
+    .welcomeLogoImg{
+        width: 30px;
+        height: 30px;
+    }
+}
+
+
+.welcomeRowContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
 
 
 @keyframes returnOpacityJumpingLeft{
     0%{
         opacity: 0;
-        left: -50px;
+        left: -12%;
     }
     25%{
-        left: -30px;
+        left: -8%;
         opacity: 1;
     }
     50%{
-        left: -50px;
+        left: -10%;
         opacity: 1;
     }
     100%{
-        left: -30px;
+        left: -8%;
         opacity: 1;
     }
 }
@@ -48,43 +66,54 @@
 @keyframes returnOpacityJumpingRight{
     0%{
         opacity: 0;
-        right: -40px;
+        right: -12%;
     }
     25%{
-        right: -30px;
+        right: -8%;
         opacity: 1;
     }
     50%{
-        right: -50px;
+        right: -10%;
         opacity: 1;
     }
     100%{
-        right: -30px;
+        right: -8%;
         opacity: 1;
     }
 }
 
 @font-face {
     font-family: Montserrat;
-    src: url('../../assets/fonts/Montserrat-LightItalic.ttf');
+    src: url('../../assets/fonts/Raleway-Light.ttf');
   }
 
 /* ------------------------------------------------------------------------- */
 
+.jsCloseLogo{
+    animation: takeOpacityJumpingLeft 1s forwards ;
+    position: absolute;
+    left: -40px;
 
+}
+
+.closeWelcomeOpen{
+    animation: closeColorWelcome 1.5s forwards ;
+    color: white;
+    position: relative;
+}
 
 .welcomeOpen{
     color: white;
     position: relative;
     animation: colorWelcome 1.5s forwards;
-    animation-delay: 1.3s;
+    animation-delay: .7s;
 }
 
 .jsOpenLogo{
     position: absolute;
     left: -40px;
     animation: returnOpacityJumpingLeft 1s forwards;
-    animation-delay: 1.3s;
+    animation-delay: .7s;
     opacity: 0;
 }
 
@@ -95,28 +124,48 @@
     }
     to{
         text-shadow: -2px -2px #bdc025, -2px -2px rgb(189, 172, 44);
-
-
-        /* color: #f7df1e; */
+                left: 8px;
+    }
+}
+@keyframes closeColorWelcome{
+    from{
+        text-shadow: -2px -2px #bdc025, -2px -2px rgb(189, 172, 44);
         left: 8px;
+    }
+    to{
+        color: white;
+        left: 0px;
     }
 }
 
 /* ------------------------------------------------------------------------- */
+
+.nodeCloseLogo{
+    animation: takeOpacityJumpingRight 1s forwards ;
+    position: absolute;
+    right: -40px;
+
+}
+
+.closeImOpen{
+    animation: closeColorIm 1.5s forwards ;
+    color: white;
+    position: relative;
+}
 
 
 .imOpen{
     color: white;
     position: relative;
     animation: colorIm 1.5s forwards;
-    animation-delay: 1s;
+    animation-delay: .5s;
 }
 
 .nodeOpenLogo{
     position: absolute;
     right: -40px;
     animation: returnOpacityJumpingRight 1s forwards;
-    animation-delay: 1s;
+    animation-delay: .5s;
     opacity: 0;
 }
 
@@ -127,9 +176,18 @@
     }
     to{
         text-shadow: -2px -2px #76af21, -2px -2px  #548013;
-
-        /* color: #8cc03e; */
         right: 8px;
+    }
+}
+
+@keyframes closeColorIm{
+    from{
+        text-shadow: -2px -2px #76af21, -2px -2px  #548013;
+        right: 8px;
+    }
+    to{
+        color: white;
+        right: 0px;
     }
 }
 
@@ -137,11 +195,25 @@
 
 /* ------------------------------------------------------------------------- */
 
+
+.reduxCloseLogo{
+    animation: takeOpacityJumpingLeft 1s forwards ;
+    position: absolute;
+    left: -40px;
+
+}
+
+.closeMyName{
+    animation: closeColorMyName 1.5s forwards ;
+    color: white;
+    position: relative;
+}
+
+
 .reduxOpenLogo{
     position: absolute;
     left: -40px;
     animation: returnOpacityJumpingLeft 1s forwards;
-    animation-delay: .7s;
     opacity: 0;
 }
 
@@ -149,7 +221,6 @@
     color: white;
     position: relative;
     animation: colorMyName .5s forwards;
-    animation-delay: .7s;
 }
 
 
@@ -164,6 +235,42 @@
     }
 }
 
+@keyframes closeColorMyName{
+    from{
+        text-shadow: -2px -2px  #8b69c0, -3px -3px  #8e64d1;
+        left: 10px;
+  
+    }
+    to{
+        color: white;
+        left: 0px;
+    }
+}
+
 
 /* ------------------------------------------------------------------------- */
 
+
+
+@keyframes takeOpacityJumpingLeft{
+    0%{
+        opacity: 1;
+        left: -8%;
+    }
+    100%{
+        left: -12%;
+        opacity: 0;
+    }
+}
+
+@keyframes takeOpacityJumpingRight{
+    0%{
+        opacity: 10;
+        right: 8%;
+    }
+
+    100%{
+        right: -12%;
+        opacity: 0;
+    }
+}

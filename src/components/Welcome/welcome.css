@@ -1,0 +1,124 @@
+.startRowContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: #76C893;
+    padding-top: 5%;
+    padding-bottom: 8%;
+}
+
+.startRowContainer>img{
+    position: absolute;
+    width: 25vw;
+    height: auto;
+    left: -25%;
+    transform: rotate(14deg);
+    top: 5%;
+    opacity: 0;
+}
+
+.glassShard{
+    position: absolute;
+    width: 20%;
+    height: 10%;
+    padding: 10px 20px;
+    font-size: 20px;
+    margin-left: 50px;
+    background-color: rgba(240, 248, 255, 0.37);
+    border: 3px solid #b1cbe554;
+    border-left: 0;
+    transform-origin: -50% 50%;
+    transform: skew(84deg, -48deg);
+    left: -45%;
+    top: 35vw;
+    opacity: 0;
+    z-index: 1;
+}
+
+
+
+@media screen and (max-width: 600px) {
+    .glassShard{
+        top: 25%;
+        width: 35%;
+        height: 1%;
+        transform-origin: 50% 50%;
+    }
+    .startRowContainer{
+        padding-top: 50px;
+    }
+    .startRowContainer>img{
+        top: 15%;
+        width: 55%;
+    }
+    
+  }
+
+
+.openWelcomeGlass{
+    animation: enterWelcomeGlass .5s forwards;
+    animation-delay: .1s;
+}
+
+.closeWelcomeGlass{
+    animation: closeWelcomeGlass 1s forwards;
+    
+}
+
+.openWelcomeDragon{
+    animation: enterWelcomeDragon .8s forwards;
+    animation-delay: .1s;
+}
+
+.closeWelcomeDragon{
+    animation: closeWelcomeDragon 1s forwards;
+}
+
+
+
+@keyframes enterWelcomeDragon{
+    from{
+        left: -25%;
+        opacity: 0;
+    }
+    to{
+        left: 0;
+        opacity: .7;
+    }
+}
+
+@keyframes closeWelcomeDragon{
+    from{
+        left: 0;
+        opacity: .7;
+    }
+    to{
+        left: -25%;
+        opacity: 0;
+    }
+}
+
+
+
+@keyframes enterWelcomeGlass{
+    from{
+        left: -45%;
+        opacity: 0;
+    }
+    to{
+        left: -20%;
+        opacity: .7;
+    }
+}
+
+@keyframes closeWelcomeGlass{
+    from{
+        left: -20%;
+        opacity: .7;
+    }
+    to{
+        left: -45%;
+        opacity: 0;
+    }
+}

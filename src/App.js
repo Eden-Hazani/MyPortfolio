@@ -1,56 +1,25 @@
-import { useEffect, useRef, useState } from 'react';
 import './App.css';
-import { HeadText } from './components/HeadText/HeadText';
-import { Terminal } from './components/Terminal/Terminal';
+import { HeadSection } from './components/HeadSection/HeadSection'
+import { Welcome } from './components/Welcome/Welcome';
+import { About } from './components/About/About';
+import { Projects } from './components/Projects/Projects';
+import { ContactMe } from './components/ContactMe/ContactMe';
+import { Footer } from './components/Footer/Footer';
 
 function App() {
-  const [terminalActive, setTerminalActive] = useState(false)
-  const [startLoadTerminal, setStartLoadTerminal] = useState(false)
-  const scrollerHead = useRef(null);
-  const scrollerTerminal = useRef(null);
-
-
-  useEffect(() => {
-    setTimeout(() => {
-      window.scrollTo(0, 0);
-      setStartLoadTerminal(true);
-    }, 500);
-  }, [])
-
-
 
   return (
-    <div className="App" >
-      <div ref={scrollerHead}>
-        {!terminalActive ?
-          <HeadText
-            isViewable={!terminalActive}
-            scroll={() => {
-              scrollerTerminal.current.scrollIntoView({ behavior: 'smooth' })
-              setTimeout(() => {
-                setTerminalActive(true)
-              }, 300);
-            }} />
-          :
-          <div style={{ height: window.innerHeight }}></div>
-        }
+    <div className="app" >
+      <div className="appChild"><HeadSection /></div>
+      <div className="appChild welcomeDiv"><Welcome /></div>
+      <div className="appChild projectsDiv"><Projects /></div>
+      <div className="appChild aboutDiv"><About /></div>
+      <div className="appChild contactMeDiv"><ContactMe /></div>
+      <div className="appChild footerDiv"><Footer /></div>
+      {/* <div className="terminalScreen" style={{ height: window.innerHeight, backgroundImage: `url(${process.env.PUBLIC_URL}/imgs/backgrounds/pleaseStandBy.jpg)` }}>
+        <Terminal />
+      </div> */}
 
-      </div>
-      { startLoadTerminal &&
-        <div ref={scrollerTerminal} className="terminalScreen" style={{ height: window.innerHeight, backgroundImage: `url(${process.env.PUBLIC_URL}/imgs/backgrounds/pleaseStandBy.jpg)` }}>
-          {terminalActive ?
-            <Terminal
-              isViewable={terminalActive}
-              scroll={() => {
-                setTerminalActive(false)
-                setTimeout(() => {
-                  scrollerHead.current.scrollIntoView({ behavior: 'smooth' })
-                }, 150);
-              }} />
-            : <div style={{ height: window.innerHeight }}></div>}
-
-        </div>
-      }
     </div>
   );
 }

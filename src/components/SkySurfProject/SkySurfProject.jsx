@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import useIsMounted from "../../hooks/useIsMounted";
 import { typeWriterEffect, typeWriterImageEffect } from "../../utility/utilityFunctions";
 import { LinkInformation } from "../LinkInformaion/LinkInformation";
-import { PhotoBar } from "../PhotoBar/PhotoBar";
 
 
 export function SkySurfProject() {
@@ -63,7 +62,6 @@ export function SkySurfProject() {
                     </div>
                 </div>
             </div>
-            <PhotoBar imagePicked={"SkySurf"} />
         </div>
     )
 }

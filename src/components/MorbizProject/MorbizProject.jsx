@@ -2,7 +2,6 @@ import { useEffect, useState } from "react"
 import useIsMounted from "../../hooks/useIsMounted"
 import { typeWriterEffect, typeWriterImageEffect } from "../../utility/utilityFunctions"
 import { LinkInformation } from "../LinkInformaion/LinkInformation"
-import { PhotoBar } from "../PhotoBar/PhotoBar"
 
 export function MorbizProject() {
     const isMounted = useIsMounted()
@@ -58,7 +57,6 @@ export function MorbizProject() {
                     </div>
                 </div>
             </div>
-            <PhotoBar imagePicked={"Morbiz"} />
         </>
     )
 }

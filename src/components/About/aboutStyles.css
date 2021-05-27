@@ -1,23 +1,15 @@
 .aboutContainer{
-    transform: rotate(35deg);
-    left: 160%;
-    top: 160%;
     display: flex;
     align-items: center;
-    background-color: white;
-    position: relative;
-    animation: launchAbout forwards ease-in-out;
-    animation-duration: 1.5s;
-    animation-delay: 1s;
-    z-index: 50;
     display: flex;
     justify-content: flex-start;
     width: 100%;
-    height: 100%;
     align-items: center;
     flex-direction: column;
-    overflow-y: auto;
-    opacity: 0;
+    position: relative;
+    padding-top: 10%;
+    min-height: 100% ;
+    background-color: #1A759F;
 }
 
 .aboutEndParagraph>p{
@@ -47,6 +39,29 @@
 
 }
 
+@media screen and (max-width: 600px) {
+    .scubaDragon{
+        width: 45% !important;
+    }
+    .aboutContainer{
+        padding-top: 60% !important;
+    }
+    .aboutHeader{
+        font-size: 3.5vh !important;
+    }
+    .aboutTextBody{
+        flex-direction: column !important;
+        width: 100% !important;
+        align-items: center !important;
+    }
+    .infoCircle{
+        margin-top: 8%;
+    }
+    .aboutRefDiv{
+        height: 25%;
+    }
+}
+
 .aboutText{
     position: absolute;
     top: 150px;
@@ -55,34 +70,362 @@
 }
 
 .aboutTextBody{
-    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .aboutTextParagraph{
     font-family: Montserrat;
     font-size: 2vh;
+    margin: 2%;
+    color: white;
+    opacity: 0;
+    text-shadow: 0px 2px black;
 }
 
 .aboutHeader{
     font-family: monoBold;
-    color: rgb(77, 77, 77);
+    color: rgb(255, 255, 255);
     font-size: 3.5vh;
     text-align: center;
 }
 
-@keyframes launchAbout {
+.enterAboutParagraphLeft{animation: enterAboutParagraphLeft 1s forwards;}
+.enterAboutParagraphRight{animation: enterAboutParagraphRight 1s forwards;}
+.leaveAboutParagraphLeft{animation: leaveAboutParagraphLeft 1s forwards;}
+.leaveAboutParagraphRight{animation: leaveAboutParagraphRight 1s forwards;}
+
+.leaveAboutHeadline{animation: closeLearn 1s forwards;}
+.enterAboutHeadline{animation: openLearn 1s forwards;}
+
+
+
+@keyframes  leaveAboutParagraphLeft{
     from{
-        opacity: 0;
-        left: 160%;
-        top: 160%;
-        transform: rotate(35deg);
-    }to{
+        transform: translateX(0%) translateY(0%) rotate(0deg); 
         opacity: 1;
-        left: 0px;
-        top: 0px;
-        transform: rotate(0deg);
+    }
+    to{
+        transform: translateX(80%) translateY(80%) rotate(90deg); 
+        opacity: 0;
     }
 }
+
+
+@keyframes leaveAboutParagraphRight{
+    from{
+        transform: translateX(0%) translateY(0%) rotate(0deg); 
+        opacity: 1;
+    }
+    to{
+     
+        transform: translateX(-80%) translateY(-80%) rotate(-90deg); 
+        opacity: 0;
+    }
+}
+
+
+
+@keyframes enterAboutParagraphLeft{
+    from{
+        transform: translateX(80%) translateY(80%) rotate(90deg); 
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0%) translateY(0%) rotate(0deg); 
+        opacity: 1;
+    }
+}
+
+
+
+@keyframes enterAboutParagraphRight{
+    from{
+        transform: translateX(-80%) translateY(-80%) rotate(-90deg); 
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0%) translateY(0%) rotate(0deg); 
+        opacity: 1;
+    }
+}
+
+.infoCircle{
+    background-color: rgba(255, 255, 255, 0.486);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.sideBubbleBottom{
+    background-color: rgba(255, 255, 255, 0.692);
+    border-radius: 100%;
+    width: 7vh;
+    height: 7vh;
+    position: absolute;
+    left: 35%;
+}
+
+.sideBubbleLeft{
+    background-color: rgba(255, 255, 255, 0.692);
+    border-radius: 100%;
+    width: 9vh;
+    height: 9vh;
+    position: absolute;
+    right: -7%;
+}
+
+.sideBubbleRight{
+    background-color: rgba(255, 255, 255, 0.692);
+    border-radius: 100%;
+    width: 5vh;
+    height: 5vh;
+    position: absolute;
+    bottom: 8%;
+}
+
+
+.scubaDragon{
+    transform:rotateZ(0deg);
+    position: absolute;
+    perspective: 500px;
+    left: 0%;
+    top: 0%;
+    height: auto;
+    width: 30vh;
+}
+
+.infoCircleHeadline{
+    font-family: Montserrat;
+    font-size: 2.2vh;
+    color: rgb(26, 117, 159);
+}
+
+
+.circleDragon{
+    height: auto;
+    width: 20vh;
+}
+
+.infoCircle>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.expandedInfoCircle{
+    animation: animateExtendInfoCircle 1s forwards;
+}
+.retractedInfoCircle{
+    animation: animateRetractInfoCircle 1s forwards;
+}
+
+.expandedInfoDragon{
+    animation: leaveInfoDragon 1s forwards;
+}
+.retractedInfoDragon{
+    animation: enterInfoDragon 1s forwards;
+}
+
+.InfoCircleTxtBody{
+    font-family: Montserrat;
+    font-size: 2vh;
+    color: rgb(26, 117, 159);
+    padding: 5%;
+    text-align: center;
+    opacity: 0;
+    animation: enterCircleTextBody 1s forwards;
+    animation-delay: .5s;
+}
+
+.aboutSubHeader{
+    font-family: Montserrat;
+    font-size: 2vh;
+    color: white;
+    margin: 0;
+    text-align: center;
+}
+
+@keyframes enterCircleTextBody{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.aboutRefDiv{
+    position: absolute;
+    top: 25%;  
+    left: 25%; 
+    transform: translate(-25%, -25%);
+}
+
+.enterDragonBubble{
+    animation: enterDragonBubble 1s forwards linear;
+}
+.leaveDragonBubble{animation: leaveDragonBubble 1s forwards;}
+
+
+.staticDragon {
+   animation: leaveDragonBubble 1s forwards;
+   animation-delay: 0s !important;
+}
+
+
+@keyframes enterDragonBubble{
+    0%{
+        opacity: 0;
+        top: 500px;
+    }
+    15%{
+        opacity: 1;
+        right: 2%;
+        top: 400px;
+    }
+    25%{
+        opacity: 1;
+        right: 2%;
+        top: 300px;
+    }
+    50%{
+        opacity: 1;
+        right: -2%;
+        top: 200px;
+    }
+    75%{
+        opacity: 1;
+        right: 2%;
+        top: 100px;
+    }
+    100%{
+        opacity: 1;
+        right: 0%;
+        top:   0px;
+    }
+}
+@keyframes leaveDragonBubble{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+
+
+
+@keyframes leaveInfoDragon{
+    from{
+        transform: scale(1);
+        opacity: 1;
+        visibility: visible;
+        max-height: 100%;
+    }
+    to{
+        transform: scale(1);
+        opacity: 0;
+        visibility: hidden;
+        max-height: 0;
+    }
+}
+
+@keyframes enterInfoDragon{
+    from{
+    
+        transform: scale(1);
+        opacity: 0;
+        visibility: hidden;
+        max-height: 0;
+    }
+    to{
+        transform: scale(1);
+        opacity: 1;
+        visibility: visible;
+        max-height: 100%;
+    }
+}
+
+
+
+@keyframes animateExtendInfoCircle{
+    from{
+        width: 45vh;
+        height: 45vh;
+        overflow: hidden;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.486);
+    }to{
+        width: 45vh;
+        height: 60vh;
+        overflow: hidden;
+        border-radius: 2%;
+        background-color: white;
+    }
+}
+
+@keyframes animateRetractInfoCircle{
+    from{
+        width: 45vh;
+        height: 60vh;
+        overflow: hidden;
+        border-radius: 2%;
+        background-color: white;
+    }to{
+        width: 45vh;
+        height: 45vh;
+        overflow: hidden;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.486);
+    }
+}
+
+
+
+.enterScubaDragon{animation: enterScubaDragon 1s forwards;}
+.leaveScubaDragon{animation: leaveScubaDragon 1s forwards;}
+
+
+@keyframes enterScubaDragon{
+    0%{
+        opacity: 0;
+        top: -5%;
+        transform: rotateZ(5deg);
+    }
+    50%{
+        opacity: 1;
+        top: 10%;
+        transform: rotateZ(30deg);
+    }
+    100%{
+        opacity: 1;
+        top: 5%;
+        transform: rotateZ(10deg);
+    }
+}
+
+@keyframes leaveScubaDragon{
+    from{
+        opacity: 1;
+        top: 5%;
+        transform: rotateZ(10deg);
+    }to{
+        opacity: 0;
+        top: -5%;
+        transform: rotateZ(5deg);
+    }
+}
+
 
 
 

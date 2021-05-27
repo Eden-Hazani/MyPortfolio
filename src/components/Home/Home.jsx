@@ -19,10 +19,7 @@ export function Home(props) {
         fifthRow: '',
     })
 
-    const [aboutTextBody, setAboutTextBody] = useState({
-        firstRow: '',
-        secondRow: '',
-    })
+
 
     const [isAboutTutorial, setIsAboutTutorial] = useState(sessionStorage.getItem('isTutorial') ? JSON.parse(sessionStorage.getItem('isTutorial')) : null)
 
@@ -33,8 +30,8 @@ export function Home(props) {
 
     const startType = async () => {
         await typeWriterEffect('interface Home {', 'flashBar', 'mainHeader', 30, 220, (val) => changeState(setUpperTextBody, 'firstRow', val));
-        await typeWriterEffect("Whoa... seems like we went a bit far in time, this place looks like the 50's", 'flashBarPurple', 'purpleTxt', 30, 220, (val) => changeState(setUpperTextBody, 'secondRow', val));
-        await typeWriterEffect("Try to Click on the different text lines, thats probably the way to navigate this old terminal", 'flashBarPurple', 'purpleTxt', 30, 220, (val) => changeState(setUpperTextBody, 'thirdRow', val));
+        await typeWriterEffect("Did you listen to the clown dragon?! seems like he tricked us back into the 50's", 'flashBarPurple', 'purpleTxt', 30, 220, (val) => changeState(setUpperTextBody, 'secondRow', val));
+        await typeWriterEffect("Don't worry, I got you. When you wish to go back to society just click the off button in the upper left corner.", 'flashBarPurple', 'purpleTxt', 30, 220, (val) => changeState(setUpperTextBody, 'thirdRow', val));
 
 
         await typeWriterEffect('projects = () => {', 'flashBar', 'txt', 30, 220, (val) => changeState(setLowerTextBody, 'firstRow', val));
@@ -42,11 +39,8 @@ export function Home(props) {
         await typeWriterButtonEffect('Project: SkySurf', 'flashBar', 30, 220, (val) => changeState(setLowerTextBody, 'thirdRow', val), () => props.switch('SKYSURF'));
         await typeWriterButtonEffect('Project: Morbiz', 'flashBar', 30, 220, (val) => changeState(setLowerTextBody, 'fourthRow', val), () => props.switch('MORBIZ'));
         await typeWriterEffect('}', 'flashBar', 'txt', 30, 220, (val) => changeState(setLowerTextBody, 'fifthRow', val));
+        await typeWriterEffect("}", 'flashBar', 'mainHeader', 30, 220, (val) => changeState(setUpperTextBody, 'fourthRow', val), true);
 
-
-        await typeWriterEffect("Like what you see? get in touch :)", 'flashBarPurple', 'purpleTxt', 30, 220, (val) => changeState(setAboutTextBody, 'firstRow', val));
-        await typeWriterButtonEffect('ClickMe = () => About me', 'flashBar', 30, 220, (val) => changeState(setAboutTextBody, 'secondRow', val), () => props.switch('ABOUT'));
-        await typeWriterEffect('}', 'flashBar', 'mainHeader', 30, 220, (val) => changeState(setUpperTextBody, 'fourthRow', val), true);
     }
 
     const changeState = (func, row, val) => isMounted.current && func(prevState => ({ ...prevState, [row]: val }));
@@ -86,13 +80,8 @@ export function Home(props) {
                     <br />
                     <div style={{ marginLeft: '2%' }}>{lowerTextBody.fifthRow}</div>
                     <br />
-                    <br />
-                    <div >{aboutTextBody.firstRow}</div>
-                    <br />
-                    <div >{aboutTextBody.secondRow}</div>
                 </div>
                 <br />
-
                 <div style={{ marginLeft: '1%' }}>{upperTextBody.fourthRow}</div>
             </div>
         </div>

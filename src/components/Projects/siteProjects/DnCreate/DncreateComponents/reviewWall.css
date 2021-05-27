@@ -1,0 +1,179 @@
+.reviewWallCont{
+    margin-top: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+}
+
+
+.reviewWallHeader{
+    font-family: Montserrat;
+    font-size: 5vh;
+    color: white;
+    margin: 0;
+    text-shadow: 0px 2px black;
+    text-align: center;
+}
+.reviewWallSubHeader{
+    font-family: Montserrat;
+    font-size: 2vh;
+    color: white;
+    text-shadow: 0px 2px black;
+    text-align: center;
+}
+
+.reviewWallCont>div{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 600px) {
+    .topLayerReviews{
+        width: 100%;
+    }
+    .mainReviewImage{
+        width: 100% !important;
+    }
+}
+
+.topLayerReviews{
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 15%;
+    width: 70%;
+    z-index: -1;
+}
+
+.mainReviewImageContainer{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-left: auto;
+    margin-right: auto;
+    height: 95%;
+    width: 95%;
+    z-index: 50;
+    overflow-x: auto;
+}
+
+.mainReviewImage{
+    width: 50%;
+    border-radius: 50px;
+    animation: popImage .7s 1 forwards;
+    cursor: pointer;
+    border: 3px rgb(32, 100, 202) solid;
+  }
+  .currentScore{
+      position: absolute;
+      margin-left: auto;
+      margin-right: auto;
+      background-color: rgba(0, 0, 0, 0.726);
+      width: 25vh;
+      border-radius: 100%;
+      z-index: 50;
+      opacity: 0;
+      transform: translateY(85%);
+      perspective: 500px;
+  }
+  .currentScore>p{
+    font-family: Montserrat;
+    font-size: 8vh;
+    color: white;
+  }
+
+.reviewImg{
+    border-radius: 15px;
+    border: 3px rgb(32, 100, 202) solid;
+    opacity: 0;
+    transform: scale(.8);
+    -webkit-transform: translate3d(0,0,0);
+}
+
+.enterReviewImg{animation: popReview 1s forwards;}
+
+
+.leaveReviews{
+    animation: leaveReviews 1s forwards;
+    animation-delay: 0s !important;
+}
+
+.enterReviews{animation: enterReviews 1s forwards;}
+
+.enterCurrentScore{
+    animation: enterCurrentScore 1s forwards;
+    animation-delay: 2s;
+}
+.leaveCurrentScore{animation: leaveCurrentScore 1s forwards;}
+
+
+@keyframes enterCurrentScore {
+    from{
+        opacity: 0;
+        transform: translateY(85%) scale(.8);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0%) scale(1);
+    }
+}
+
+@keyframes leaveCurrentScore {
+    from{
+        opacity: 1;
+        transform: translateY(0%) scale(1);
+    }
+    to{
+        opacity: 0;
+        transform: translateY(85%) scale(.8);
+    }
+}
+
+
+
+
+@keyframes leaveReviews {
+    from{
+        opacity: 1;
+        transform: scale(1);
+    }
+    to{
+        opacity: 0;
+        transform: scale(.8);
+    }
+}
+
+@keyframes enterReviews {
+    from{
+        opacity: 0;
+        transform: scale(.8);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes popReview{
+    0%{
+        opacity: 0;
+        transform: scale(.8);
+    }
+    50%{
+        opacity: 1;
+        transform: scale(1.2);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}

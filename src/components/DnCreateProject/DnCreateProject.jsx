@@ -2,7 +2,6 @@ import { useEffect, useState } from "react"
 import useIsMounted from "../../hooks/useIsMounted";
 import { typeWriterEffect, typeWriterImageEffect } from "../../utility/utilityFunctions";
 import { LinkInformation } from "../LinkInformaion/LinkInformation";
-import { PhotoBar } from "../PhotoBar/PhotoBar";
 import './dncreateProject.css'
 
 export function DnCreateProject() {
@@ -62,7 +61,6 @@ export function DnCreateProject() {
                     </div>
                 </div>
             </div>
-            <PhotoBar imagePicked={"DnCreate"} />
         </>
     )
 }

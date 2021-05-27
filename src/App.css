@@ -2,3 +2,20 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+.contactMeDiv{
+    background-color: #1E6091;
+    z-index: 25;
+    position: relative;
+}
+.aboutDiv{
+    z-index: -1;
+    background-color: #1A759F;
+}
+.projectsDiv{
+    background-color: #34A0A4;
+}
+
+.footerDiv{
+    background-color: #184E77;
+}

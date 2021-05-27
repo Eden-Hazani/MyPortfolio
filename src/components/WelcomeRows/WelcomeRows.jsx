@@ -1,28 +1,32 @@
+import { useRef } from 'react';
+import useOnScreen from '../../hooks/useOnScreen';
 import './welcomeRows.css';
 
 export function WelcomeRows() {
+    const animatedRef = useRef(null)
+    const isVis = useOnScreen(animatedRef, `${window.innerWidth < 600 ? "0px -20px" : '0px -150px'}`)
     return (
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+        <div className="welcomeRowContainer" style={{ height: window.innerHeight }}>
             <div className="openingRow">
                 <div className="centerOpenWords">
-                    <img className="reduxOpenLogo" src={'imgs/logos/redux.svg'} width={30} height={30} alt={'reduxLogo'} />
-                    <span className="regularTxt myNameOpen">My name is Eden hazani</span>
+                    <img className={`welcomeLogoImg ${isVis ? 'reduxOpenLogo' : 'reduxCloseLogo'}`} src={`${process.env.PUBLIC_URL}/imgs/logos/redux.svg`} alt={'reduxLogo'} />
+                    <span className={`regularTxt ${isVis ? 'myNameOpen' : 'closeMyName'}`}>I'm a fullstack developer</span>
                 </div>
 
             </div>
 
-            <div className="openingRow">
+            <div ref={animatedRef} className="openingRow">
                 <div className="centerOpenWords">
-                    <img className="nodeOpenLogo" src={'imgs/logos/nodeJS.svg'} width={30} height={30} alt={'nodeLogo'} />
-                    <span className="regularTxt imOpen">I'm a web developer</span>
+                    <img className={`welcomeLogoImg ${isVis ? 'nodeOpenLogo' : 'nodeCloseLogo'}`} src={`${process.env.PUBLIC_URL}/imgs/logos/nodeJS.svg`} alt={'nodeLogo'} />
+                    <span className={`regularTxt ${isVis ? 'imOpen' : 'closeImOpen'}`}>with passion for software</span>
                 </div>
             </div>
 
 
             <div className="openingRow">
                 <div className="centerOpenWords">
-                    <img className="jsOpenLogo" src={'imgs/logos/javascript.svg'} width={30} height={30} alt={'jsLogo'} />
-                    <span className="regularTxt welcomeOpen">Welcome To My Portfolio</span>
+                    <img className={`welcomeLogoImg ${isVis ? 'jsOpenLogo' : 'jsCloseLogo'}`} src={`${process.env.PUBLIC_URL}/imgs/logos/javascript.svg`} alt={'jsLogo'} />
+                    <span className={`regularTxt ${isVis ? 'welcomeOpen' : 'closeWelcomeOpen'}`}>Welcome To My Portfolio</span>
                 </div>
 
             </div>

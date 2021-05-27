@@ -25,3 +25,32 @@
     z-index: 10;
     align-items: center;
 }
+
+.terminalOpening{
+    animation: openTerminal 2s forwards;
+}
+.terminalClosing{
+    animation: closeTerminal 2s forwards;
+}
+
+.terminal{
+    width: 0%;
+    z-index: 50;
+}
+
+@keyframes openTerminal{
+    from{
+        width: 0%;
+    }
+    to{
+        width: 100%;
+    }
+}
+@keyframes closeTerminal{
+    from{
+        width: 100%;
+    }
+    to{
+        width: 0%;
+    }
+}
