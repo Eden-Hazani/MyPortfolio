@@ -1,23 +1,24 @@
 {
   "files": {
-    "main.css": "/MyPortfolio/static/css/main.605fc250.chunk.css",
-    "main.js": "/MyPortfolio/static/js/main.06c5be39.chunk.js",
-    "main.js.map": "/MyPortfolio/static/js/main.06c5be39.chunk.js.map",
+    "main.css": "/MyPortfolio/static/css/main.1341e315.chunk.css",
+    "main.js": "/MyPortfolio/static/js/main.b1e5b5af.chunk.js",
+    "main.js.map": "/MyPortfolio/static/js/main.b1e5b5af.chunk.js.map",
     "runtime-main.js": "/MyPortfolio/static/js/runtime-main.55286d6b.js",
     "runtime-main.js.map": "/MyPortfolio/static/js/runtime-main.55286d6b.js.map",
-    "static/js/2.080612a1.chunk.js": "/MyPortfolio/static/js/2.080612a1.chunk.js",
-    "static/js/2.080612a1.chunk.js.map": "/MyPortfolio/static/js/2.080612a1.chunk.js.map",
+    "static/js/2.12b9d860.chunk.js": "/MyPortfolio/static/js/2.12b9d860.chunk.js",
+    "static/js/2.12b9d860.chunk.js.map": "/MyPortfolio/static/js/2.12b9d860.chunk.js.map",
     "index.html": "/MyPortfolio/index.html",
-    "static/css/main.605fc250.chunk.css.map": "/MyPortfolio/static/css/main.605fc250.chunk.css.map",
-    "static/js/2.080612a1.chunk.js.LICENSE.txt": "/MyPortfolio/static/js/2.080612a1.chunk.js.LICENSE.txt",
-    "static/media/headText.css": "/MyPortfolio/static/media/Montserrat-MediumItalic.54b24d99.ttf",
-    "static/media/welcomeRows.css": "/MyPortfolio/static/media/Montserrat-LightItalic.d79f80a4.ttf",
-    "static/media/aboutStyles.css": "/MyPortfolio/static/media/ShareTechMono-Regular.8b302ac6.ttf"
+    "static/css/main.1341e315.chunk.css.map": "/MyPortfolio/static/css/main.1341e315.chunk.css.map",
+    "static/js/2.12b9d860.chunk.js.LICENSE.txt": "/MyPortfolio/static/js/2.12b9d860.chunk.js.LICENSE.txt",
+    "static/media/headSection.css": "/MyPortfolio/static/media/Montserrat-Medium.e2d60bc4.ttf",
+    "static/media/aboutStyles.css": "/MyPortfolio/static/media/ShareTechMono-Regular.8b302ac6.ttf",
+    "static/media/index.css": "/MyPortfolio/static/media/neonFuture.1a441dbb.ttf",
+    "static/media/welcomeRows.css": "/MyPortfolio/static/media/Raleway-Light.f25e9b3a.ttf"
   },
   "entrypoints": [
     "static/js/runtime-main.55286d6b.js",
-    "static/js/2.080612a1.chunk.js",
-    "static/css/main.605fc250.chunk.css",
-    "static/js/main.06c5be39.chunk.js"
+    "static/js/2.12b9d860.chunk.js",
+    "static/css/main.1341e315.chunk.css",
+    "static/js/main.b1e5b5af.chunk.js"
   ]
 }
