@@ -9,16 +9,16 @@ export function ImageWall() {
     return (
         <div ref={firstRowRef} className="imageWallCont">
             <div className={`innerImageWallCont ${firstRowEquipped ? 'enterFirstRowImageWallPictures' : 'LeaveImageWallPictures'}`}>
-                <img className={`imageWallImage`} style={{ flex: .1 }} src={`${process.env.PUBLIC_URL}/imgs/dncreateImgs/characterPage.jpeg`} alt="dncreate2" />
-                <img className={`imageWallImage`} style={{ flex: .1 }} src={`${process.env.PUBLIC_URL}/imgs/dncreateImgs/adventure.png`} alt="dncreate2" />
-                <img className={`imageWallImage`} style={{ flex: .1 }} src={`${process.env.PUBLIC_URL}/imgs/dncreateImgs/chatImg.jpeg`} alt="dncreate2" />
-                <img className={`imageWallImage`} style={{ flex: .1 }} src={`${process.env.PUBLIC_URL}/imgs/dncreateImgs/photoGallery.jpeg`} alt="dncreate2" />
+                <img className={`imageWallImage`} style={{ flex: .1 }} src={`${process.env.PUBLIC_URL}/imgs/dnCreateImgs/characterPage.jpeg`} alt="dncreate2" />
+                <img className={`imageWallImage`} style={{ flex: .1 }} src={`${process.env.PUBLIC_URL}/imgs/dnCreateImgs/adventure.png`} alt="dncreate2" />
+                <img className={`imageWallImage`} style={{ flex: .1 }} src={`${process.env.PUBLIC_URL}/imgs/dnCreateImgs/chatImg.jpeg`} alt="dncreate2" />
+                <img className={`imageWallImage`} style={{ flex: .1 }} src={`${process.env.PUBLIC_URL}/imgs/dnCreateImgs/photoGallery.jpeg`} alt="dncreate2" />
             </div>
             <div className={`innerImageWallCont ${firstRowEquipped ? 'enterSecondRowImageWallPictures' : 'LeaveImageWallPictures'}`}>
-                <img className={`imageWallImage`} style={{ flex: .1 }} src={`${process.env.PUBLIC_URL}/imgs/dncreateImgs/quests.png`} alt="dncreate2" />
-                <img className={`imageWallImage`} style={{ flex: .1 }} src={`${process.env.PUBLIC_URL}/imgs/dncreateImgs/raceCreator.png`} alt="dncreate2" />
-                <img className={`imageWallImage`} style={{ flex: .1 }} src={`${process.env.PUBLIC_URL}/imgs/dncreateImgs/raceMenu.png`} alt="dncreate2" />
-                <img className={`imageWallImage`} style={{ flex: .1 }} src={`${process.env.PUBLIC_URL}/imgs/dncreateImgs/weaponsAndEquipment.png`} alt="dncreate2" />
+                <img className={`imageWallImage`} style={{ flex: .1 }} src={`${process.env.PUBLIC_URL}/imgs/dnCreateImgs/quests.png`} alt="dncreate2" />
+                <img className={`imageWallImage`} style={{ flex: .1 }} src={`${process.env.PUBLIC_URL}/imgs/dnCreateImgs/raceCreator.png`} alt="dncreate2" />
+                <img className={`imageWallImage`} style={{ flex: .1 }} src={`${process.env.PUBLIC_URL}/imgs/dnCreateImgs/raceMenu.png`} alt="dncreate2" />
+                <img className={`imageWallImage`} style={{ flex: .1 }} src={`${process.env.PUBLIC_URL}/imgs/dnCreateImgs/weaponsAndEquipment.png`} alt="dncreate2" />
             </div>
             <div className={`imageWallTxt ${firstRowEquipped ? 'imageWallTxtEnter' : 'imageWallTxtLeave'}`}>
                 <p>With over 2000 users sharing</p>

@@ -45,21 +45,21 @@ export function DnCreate(props) {
             </div>
             <div className="dncreateImgMainContainer" style={{ flex: 1 }}>
                 <div ref={firstImageRef} className="dncreateImgContainer">
-                    <img style={{ flex: .1 }} className={`photoGalleryImage ${firstImgEquipped ? 'photoGalleryImageEnter' : 'photoGalleryImageLeave'}`} src={`${process.env.PUBLIC_URL}/imgs/dncreateImgs/photoGallery.jpeg`} alt="dncreate1" />
+                    <img style={{ flex: .1 }} className={`photoGalleryImage ${firstImgEquipped ? 'photoGalleryImageEnter' : 'photoGalleryImageLeave'}`} src={`${process.env.PUBLIC_URL}/imgs/dnCreateImgs/photoGallery.jpeg`} alt="dncreate1" />
                     <div className={`${firstImgEquipped ? 'photoGalleryTxtEnter' : 'photoGalleryTxtLeave'}`} style={{ flex: .3 }}>
                         <p className="dncreatePicDesc">Group photo galleries</p>
                         <p className="dncreatePicDesc"> share anything with your party!</p>
                     </div>
                 </div>
                 <div ref={secondImageRef} className="dncreateImgContainer" style={{ flex: 1 }}>
-                    <img style={{ flex: .1 }} className={`photoGalleryImage ${secondImgEquipped ? 'photoGalleryImageEnter' : 'photoGalleryImageLeave'}`} src={`${process.env.PUBLIC_URL}/imgs/dncreateImgs/characterPage.jpeg`} alt="dncreate2" />
+                    <img style={{ flex: .1 }} className={`photoGalleryImage ${secondImgEquipped ? 'photoGalleryImageEnter' : 'photoGalleryImageLeave'}`} src={`${process.env.PUBLIC_URL}/imgs/dnCreateImgs/characterPage.jpeg`} alt="dncreate2" />
                     <div className={`${secondImgEquipped ? 'photoGalleryTxtEnter' : 'photoGalleryTxtLeave'}`} style={{ flex: .3 }}>
                         <p className="dncreatePicDesc">Tons of options to customize your character</p>
                         <p className="dncreatePicDesc">from a customizable character sheet</p>
                     </div>
                 </div>
                 <div ref={thirdImageRef} className="dncreateImgContainer" style={{ flex: 1 }}>
-                    <img style={{ flex: .1 }} className={`photoGalleryImage ${thirdImgEquipped ? 'photoGalleryImageEnter' : 'photoGalleryImageLeave'}`} src={`${process.env.PUBLIC_URL}/imgs/dncreateImgs/chatImg.jpeg`} alt="dncreate2" />
+                    <img style={{ flex: .1 }} className={`photoGalleryImage ${thirdImgEquipped ? 'photoGalleryImageEnter' : 'photoGalleryImageLeave'}`} src={`${process.env.PUBLIC_URL}/imgs/dnCreateImgs/chatImg.jpeg`} alt="dncreate2" />
                     <div className={`${thirdImgEquipped ? 'photoGalleryTxtEnter' : 'photoGalleryTxtLeave'}`} style={{ flex: .3 }}>
                         <p className="dncreatePicDesc">Chat with your party members in app with adventure chat.</p>
                         <p className="dncreatePicDesc">including notifications and instant messaging</p>

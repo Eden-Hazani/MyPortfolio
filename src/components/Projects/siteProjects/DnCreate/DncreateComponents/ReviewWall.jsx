@@ -25,8 +25,8 @@ export function ReviewWall() {
             }
             let index = 0;
             for (let number of numberArray) {
-                jsxArray.push(<img alt="morbizSign" src={`${process.env.PUBLIC_URL}/imgs/dncreateReviews/${number}.JPG`}
-                    onClick={() => setCurrentImg(`${number}.JPG`)}
+                jsxArray.push(<img alt="morbizSign" src={`${process.env.PUBLIC_URL}/imgs/dncreateReviews/${number}.jpg`}
+                    onClick={() => setCurrentImg(`${number}.jpg`)}
                     className={`reviewImg  ${innerReviewEquipped ? 'enterReviewImg' : 'leaveReviews'}`}
                     style={{
                         animationDelay: `${index === 0 ? 0 : number / 2.5}s`,
