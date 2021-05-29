@@ -21,7 +21,6 @@ export function About(props) {
 
     const handleClick = (value) => {
         const updatedState = [...currentOpen]
-        console.log(updatedState)
         if (!updatedState[value]) {
             updatedState[value] = true
             setCurrentOpen(updatedState)
@@ -52,7 +51,7 @@ export function About(props) {
                                 dragonName={'runningDragon'}
                                 isVisible={bubblesEquipped}
                                 index={0}
-                                headLine={'Sports and a healthy lifestyle'}
+                                headLine={'Lifestyle'}
                                 handleClick={() => handleClick(0)}
                                 innerText={
                                     <div>
@@ -76,9 +75,9 @@ export function About(props) {
                             <AboutBall
                                 currentOpen={currentOpen[1]}
                                 isVisible={bubblesEquipped}
-                                dragonName={'homeDragon'}
+                                dragonName={'404Dragon'}
                                 index={1}
-                                headLine={'Passion in programing'}
+                                headLine={'Programing'}
                                 handleClick={() => handleClick(1)}
                                 innerText={
                                     <div>
@@ -108,7 +107,7 @@ export function About(props) {
                             dragonName={'edenDragon'}
                             isVisible={bubblesEquipped}
                             index={2}
-                            headLine={'Who am I'}
+                            headLine={'Myself'}
                             handleClick={() => handleClick(2)}
                             innerText={
                                 <div>

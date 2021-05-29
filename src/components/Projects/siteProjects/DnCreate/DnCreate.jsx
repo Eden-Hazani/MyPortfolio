@@ -68,7 +68,7 @@ export function DnCreate(props) {
             </div>
             <ReviewWall />
             <ImageWall />
-            <ExternalLinks git={'https://github.com/Eden-Hazani/DnCreate'} playStore={'https://play.google.com/store/apps/details?id=com.DnCreate'} />
+            <ExternalLinks back={() => props.closeProject()} git={'https://github.com/Eden-Hazani/DnCreate'} playStore={'https://play.google.com/store/apps/details?id=com.DnCreate'} />
             <div ref={projectBodyRef} className="dncreateEnd"><p>end</p></div>
         </div>
     )

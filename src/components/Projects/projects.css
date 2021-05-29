@@ -103,7 +103,6 @@
     position: relative;
     transform: scale(.8);
     opacity: 0;
-    text-shadow: 0px 2px 2px #000000;
 }
 
 .deceitDragon{
@@ -173,7 +172,6 @@
     color: white;
     font-size: 8vh;
     font-family: monoBold;
-    text-shadow: 0px 2px 2px #000000;
 }
 
 .plane{
@@ -245,6 +243,7 @@
     flex-direction: row;
     position: relative;
     cursor: pointer;
+    z-index: 20;
 }
 
 .burger{

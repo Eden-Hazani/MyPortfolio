@@ -69,7 +69,7 @@ export function SkySurf(props) {
                     </div>
                 </div>
             </div>
-            <ExternalLinks site={'https://skysurf.herokuapp.com'} git={'https://github.com/Eden-Hazani/SkySurf'} />
+            <ExternalLinks back={() => props.closeProject()} site={'https://skysurf.herokuapp.com'} git={'https://github.com/Eden-Hazani/SkySurf'} />
             <div ref={projectBodyRef} className="dncreateEnd"><p>end</p></div>
         </div>
     )

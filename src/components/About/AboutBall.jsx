@@ -9,7 +9,7 @@ export function AboutBall(props) {
             <div className={`${props.currentOpen ? 'expandedInfoDragon' : 'retractedInfoDragon'}`}>
                 <img className={`circleDragon ${props.isVisible ? `enterDragonRoll${props.index}` : `leaveDragonRoll${props.index}`}`} src={`${process.env.PUBLIC_URL}/imgs/backgrounds/${props.dragonName}.svg`} alt="dncreate" />
                 <p className="infoCircleHeadline">{props.headLine}</p>
-                <FaChevronDown size={'3vw'} color={'rgb(26, 117, 159)'} />
+                <FaChevronDown size={'1vw'} color={'rgb(26, 117, 159)'} />
             </div>
             {props.currentOpen && <div>
                 {props.innerText}

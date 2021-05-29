@@ -15,19 +15,22 @@
 
 @media screen and (max-width: 600px) {
     .smallBubbleLine{
-        width: 27vh !important;
-        height: 12vh !important;
+        width: 43vw  !important;
+        height: 30vw !important;
+        right: -3% !important;
+        top: 15% !important;
+        transform: rotate( 71deg ) !important;
     }
 }
 
 .smallBubble{
     position: absolute;
-    right: 35%;
-    top: 6%;
+    right: 19%;
+    top: 2%;
     border-radius: 100%;
-    width: 3.5vh; 
+    width: 4.5vh;
     transform: rotate(25deg);
-    height: 3.5vh;  
+    height: 3.5vh;
     background-color: rgb(255, 255, 255);
 }
 
@@ -35,10 +38,10 @@
     position: absolute;
     right: -5%;
     top: 25%;
-    width: 25vh; 
-    height: 10vh;  
+    width: 19vh;
+    height: 10vh;
     border: solid 5px rgb(255, 255, 255);
-    transform: rotate(62deg) ;
+    transform: rotate(68deg);
     border-color: rgb(255, 255, 255) transparent transparent transparent;
     border-radius: 50%/100px 100px 0 0;
 }

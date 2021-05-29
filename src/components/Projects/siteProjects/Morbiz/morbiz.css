@@ -11,7 +11,7 @@
 
 .morbizHeader>p{
     font-family: neon;
-    font-size: 7vh;
+    font-size: 5vh;
     transform: scale(.8);
     opacity: 0;
     color: white;
@@ -28,7 +28,6 @@
     font-family: Montserrat;
     font-size: 1.6vh;
     color: white;
-    text-shadow: 0px 2px 1px #000000;
 }
 
 .morbizSubTxtContainer>div{

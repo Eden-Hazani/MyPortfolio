@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useRef } from 'react'
 import useOnScreen from '../../hooks/useOnScreen'
 import { WelcomeRows } from '../WelcomeRows/WelcomeRows'
 import './welcome.css'
@@ -8,7 +8,6 @@ export function Welcome() {
     const containerRef = useRef(null)
     const glassRef = useRef(null)
     const isGlassVis = useOnScreen(containerRef, window.innerWidth < 600 ? '0px' : '0px', .8)
-    useEffect(() => { console.log(glassRef.current.getAttribute('class')) }, [isGlassVis])
 
 
     return (

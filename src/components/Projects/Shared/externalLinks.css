@@ -3,15 +3,35 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100%;
-    width: 100%;
-    margin-top: 25%;
-    margin-bottom: 25%;
+    top: 0; 
+    right: 2vw; 
+    border: 0;
+    position: fixed;
 }
+
+.externalLinkImg>p{
+    font-family: Montserrat;
+    font-size: 5vw;
+    color: white;
+}
+
+.logoStatic{
+    width: 5vw;
+    height: auto;
+    margin-bottom: 2vh;
+}
+
+@media screen and (max-width: 600px) {
+    .logoStatic{
+        width: 10vw;
+    }
+  }
+
 
 .externalLinkCont>div{
     display: flex;
     justify-content: space-evenly;
+    flex-direction: column;
     width: 100%;
 }
 
@@ -23,13 +43,7 @@
     perspective: 500px;
 }
 
-.enterLinkText{
-    animation: enterLinkText 1s forwards;
-}
 
-.leaveLinkText{
-    animation: leaveLinkText 1s forwards;
-}
 
 .externalLinkImg{
     cursor: pointer;
@@ -38,28 +52,5 @@
     justify-content: center;
 }
 
-.externalLinkImg>img{
-    width: 80%;
-    height: auto;
-}
 
-@keyframes enterLinkText{
-    from{
-        transform: rotateZ(50deg);
-        opacity: 0;
-    }
-    to{
-        transform: rotateZ(0deg);
-        opacity: 1;
-    }
-}
-@keyframes leaveLinkText{
-    from{
-        transform: rotateZ(0deg);
-        opacity: 1;
-    }
-    to{
-        transform: rotateZ(50deg);
-        opacity: 0;
-    }
-}
+

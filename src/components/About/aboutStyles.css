@@ -32,35 +32,14 @@
     width: 50%;
     margin: auto;
     margin-top: 150px;
-    font-size: 2.6vh;
+    font-size: 2.5vh;
     background-color: #9e7dd1;
     border-radius: 15px;
     border: 1.5px black solid;
 
 }
 
-@media screen and (max-width: 600px) {
-    .scubaDragon{
-        width: 45% !important;
-    }
-    .aboutContainer{
-        padding-top: 60% !important;
-    }
-    .aboutHeader{
-        font-size: 3.5vh !important;
-    }
-    .aboutTextBody{
-        flex-direction: column !important;
-        width: 100% !important;
-        align-items: center !important;
-    }
-    .infoCircle{
-        margin-top: 8%;
-    }
-    .aboutRefDiv{
-        height: 25%;
-    }
-}
+
 
 .aboutText{
     position: absolute;
@@ -84,7 +63,6 @@
     margin: 2%;
     color: white;
     opacity: 0;
-    text-shadow: 0px 2px black;
 }
 
 .aboutHeader{
@@ -167,8 +145,8 @@
 .sideBubbleBottom{
     background-color: rgba(255, 255, 255, 0.692);
     border-radius: 100%;
-    width: 7vh;
-    height: 7vh;
+    width: 6vw;
+    height: 6vw;
     position: absolute;
     left: 35%;
 }
@@ -176,8 +154,8 @@
 .sideBubbleLeft{
     background-color: rgba(255, 255, 255, 0.692);
     border-radius: 100%;
-    width: 9vh;
-    height: 9vh;
+    width: 4vw;
+    height: 4vw;
     position: absolute;
     right: -7%;
 }
@@ -185,8 +163,8 @@
 .sideBubbleRight{
     background-color: rgba(255, 255, 255, 0.692);
     border-radius: 100%;
-    width: 5vh;
-    height: 5vh;
+    width: 3.5vw;
+    height: 3.5vw;
     position: absolute;
     bottom: 8%;
 }
@@ -204,14 +182,18 @@
 
 .infoCircleHeadline{
     font-family: Montserrat;
-    font-size: 2.2vh;
+    font-size: 1.8vw;
     color: rgb(26, 117, 159);
 }
 
 
 .circleDragon{
     height: auto;
-    width: 20vh;
+    width: 9vw;
+}
+
+.infoCircle>div>div{
+    height: 100%;
 }
 
 .infoCircle>div{
@@ -222,13 +204,6 @@
 }
 
 
-.expandedInfoCircle{
-    animation: animateExtendInfoCircle 1s forwards;
-}
-.retractedInfoCircle{
-    animation: animateRetractInfoCircle 1s forwards;
-}
-
 .expandedInfoDragon{
     animation: leaveInfoDragon 1s forwards;
 }
@@ -238,7 +213,7 @@
 
 .InfoCircleTxtBody{
     font-family: Montserrat;
-    font-size: 2vh;
+    font-size: 1.5vh;
     color: rgb(26, 117, 159);
     padding: 5%;
     text-align: center;
@@ -249,7 +224,7 @@
 
 .aboutSubHeader{
     font-family: Montserrat;
-    font-size: 2vh;
+    font-size: 2.5vh;
     color: white;
     margin: 0;
     text-align: center;
@@ -358,32 +333,114 @@
 
 
 
+
+@media screen and (max-width: 600px) {
+    .infoCircleHeadline{
+        font-size: 6vw !important;
+    }
+    .scubaDragon{
+        width: 45% !important;
+    }
+    .aboutContainer{
+        padding-top: 60% !important;
+    }
+    .aboutHeader{
+        font-size: 3.5vh !important;
+    }
+    .aboutTextBody{
+        flex-direction: column !important;
+        width: 100% !important;
+        align-items: center !important;
+    }
+    .infoCircle{
+        margin-top: 8%;
+    }
+    .aboutRefDiv{
+        height: 25%;
+    }
+    .expandedInfoCircle{
+        animation: animateExtendInfoCircleMobile 1s forwards !important;
+    }
+    .retractedInfoCircle{
+        animation: animateRetractInfoCircleMobile 1s forwards !important;
+    }
+    .circleDragon{
+        width: 30vw;
+    }
+    .InfoCircleTxtBody{
+        font-size: 2vh;
+    }
+}
+
+
+.expandedInfoCircle{
+    animation: animateExtendInfoCircle 1s forwards;
+}
+.retractedInfoCircle{
+    animation: animateRetractInfoCircle 1s forwards;
+}
+
+
+
 @keyframes animateExtendInfoCircle{
     from{
-        width: 45vh;
-        height: 45vh;
+        width: 15vw;
+        height: 15vw;
         overflow: hidden;
         border-radius: 50%;
         background-color: rgba(255, 255, 255, 0.486);
     }to{
-        width: 45vh;
-        height: 60vh;
+        width: 25vw;
+        height: 35vw;
         overflow: hidden;
         border-radius: 2%;
         background-color: white;
     }
 }
 
+
 @keyframes animateRetractInfoCircle{
     from{
-        width: 45vh;
-        height: 60vh;
+        width: 25vw;
+        height: 35vw;
         overflow: hidden;
         border-radius: 2%;
         background-color: white;
     }to{
-        width: 45vh;
-        height: 45vh;
+        width: 15vw;
+        height: 15vw;
+        overflow: hidden;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.486);
+    }
+}
+@keyframes animateExtendInfoCircleMobile{
+    from{
+        width: 60vw;
+        height: 60vw;
+        overflow: hidden;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.486);
+    }to{
+        width: 65vw;
+        height: 145vw;
+        overflow: hidden;
+        border-radius: 2%;
+        background-color: white;
+    }
+}
+
+
+@keyframes animateRetractInfoCircleMobile{
+    from{
+        width: 65vw;
+        height: 145vw;
+        overflow: hidden;
+        border-radius: 2%;
+        background-color: white;
+    }to{
+        width: 60vw;
+        height: 60vw;
         overflow: hidden;
         border-radius: 50%;
         background-color: rgba(255, 255, 255, 0.486);
@@ -438,7 +495,6 @@
     font-family: 'fallout';
     color: rgb(041 , 225, 140);
     font-size: 4vh;
-    text-shadow: 0 0 15px rgb(041 , 225, 140), 0 0 10px rgb(041 , 225, 140), -20px -27px 3px rgba(206,89,55,0);
     margin-left: 1%;
 }
 

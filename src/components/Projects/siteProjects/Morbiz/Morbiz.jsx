@@ -66,7 +66,7 @@ export function Morbiz(props) {
                     </div>
                 </div>
             </div>
-            <ExternalLinks git={'https://github.com/Eden-Hazani/Morbiez'} site={'https://eden-hazani.github.io/home'} />
+            <ExternalLinks back={() => props.closeProject()} git={'https://github.com/Eden-Hazani/Morbiez'} site={'https://eden-hazani.github.io/home'} />
             <div ref={projectBodyRef} className="dncreateEnd"><p>end</p></div>
         </div>
     )

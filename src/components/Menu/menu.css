@@ -1,0 +1,279 @@
+.menuContainer{
+    position: fixed;
+    bottom: 5%;
+    right: 2%;
+    z-index: 100;
+    width: 7vw;
+    height: 7vw;
+    border-radius: 100%;
+}
+
+.innerMenuContainer{
+    cursor: pointer;
+    animation: enterMenuBubble 1s forwards linear;
+    position: relative;
+    animation-delay: .5s;
+    opacity: 0;
+    bottom: -100px;
+    right: 25px;
+}
+
+.innerMenuContainer>div{
+    background-color: rgba(255, 255, 255, 0.555);
+    width: 7vw;
+    height: 7vw;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menuLeftBubble{
+    background-color: rgba(255, 255, 255, 0.616);
+    width: 1.5vw;
+    height: 1.5vw;
+    border-radius: 100%;
+    position: absolute;
+    animation: enterLeftMenuBubble 1s forwards linear;
+    animation-delay: .7s;
+    opacity: 0;
+    top: 100px;
+    right: 25px;
+}
+.menuRightBubble{
+    background-color: rgba(255, 255, 255, 0.377);
+    width: 2vw;
+    height: 2vw;
+    border-radius: 100%;
+    position: absolute;
+    left: -20%;
+    animation: enterRightMenuBubble 1s forwards linear;
+    animation-delay: 1s;
+    opacity: 0;
+    bottom: -100px;
+    right: 25px;
+}
+
+.menuContainer>div{
+    position: relative;
+}
+
+.innerMenuContainer>div>p{
+    color: black;
+    font-family: monoBold;
+    font-size: 2vh;
+}
+
+.aboutMeOption{
+    cursor: pointer;
+    opacity: 0;
+    transform: scale(0);
+    width: 5vw;
+    height: 5vw;
+    background-color: rgba(255, 255, 255, 0.753);
+    position: absolute !important;
+    top: -60%;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: -70%;
+}
+
+.contactMeOption{
+    cursor: pointer;
+    opacity: 0;
+    transform: scale(0);
+    width: 5vw;
+    height: 5vw;
+    background-color: rgba(255, 255, 255, 0.753);
+    position: absolute !important;
+    bottom: 10%;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: -80%;
+}
+
+.projectsOption{
+    cursor: pointer;
+    opacity: 0;
+    transform: scale(0);
+    width: 5vw;
+    height: 5vw;
+    background-color: rgba(255, 255, 255, 0.753);
+    position: absolute !important;
+    top: -100%;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menuOptionText{
+    color: black;
+    font-family: monoBold;
+    font-size: 1.3vh;
+}
+
+@media screen and (max-width: 600px) {
+    .innerMenuContainer>div{
+        width: 25vw !important;
+        height: 25vw !important;
+    }
+    .menuContainer{
+        width: 25vw !important;
+        height: 15vw !important;
+    }
+    .projectsOption{
+        top: -155%;
+        width: 17vw !important;
+        height: 17vw !important;
+    }
+    .contactMeOption{
+        width: 17vw !important;
+        height: 17vw !important;
+        bottom: 95% !important;
+        left: -70% !important;
+    }
+    .aboutMeOption{
+        left: -80% !important;
+        top: 15% !important;
+        width: 17vw !important;
+        height: 17vw !important;
+    }
+    .menuLeftBubble{
+        width: 5vw !important;
+        height: 5vw !important;
+    }
+    .menuRightBubble{
+        width: 8vw !important;
+        height: 8vw !important;
+    }
+}
+
+.immediateAniDelay{ animation-delay: 0s !important;}
+.midAniDelay{animation-delay: .4s !important;}
+.longAniDelay{animation-delay: .8s !important;}
+
+
+.openMenuOption{animation: openMenuOptions 1s forwards;}
+.closeMenuOption{animation: closeMenuOptions 1s forwards;}
+
+.pressMenu{animation: pressMenu .5s forwards;}
+.closeMenu{animation: releaseMenu .5s forwards;}
+
+@keyframes pressMenu{
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(.8);
+    }
+}
+
+@keyframes releaseMenu{
+    from{
+        transform: scale(.8);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+
+
+@keyframes openMenuOptions{
+    from{
+        opacity: 0;
+        transform: scale(0);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+@keyframes closeMenuOptions{
+    from{
+        opacity: 1;
+        transform: scale(1);
+    }
+    to{
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+
+
+
+
+
+
+@keyframes enterMenuBubble{
+    0%{
+        opacity: 0;
+        bottom: -100px;
+        right: 25px;
+    }
+    25%{
+        opacity: 1;
+        right: 5px;
+        bottom:  -50px;
+    }
+    50%{
+        opacity: 1;
+        right: 25px;
+        bottom:  0px;
+    }
+    100%{
+        opacity: 1;
+        right: 5px;
+        bottom:    20px;
+    }
+}
+
+@keyframes enterLeftMenuBubble{
+    0%{
+        opacity: 0;
+        top: 250px;
+        right: 25px;
+    }
+    25%{
+        opacity: 1;
+        right: 5px;
+        top:  150px;
+    }
+    50%{
+        opacity: 1;
+        right: 25px;
+        top:  100px;
+    }
+    100%{
+        opacity: 1;
+        right: 5px;
+        top:    -30px;
+    }
+}
+
+@keyframes enterRightMenuBubble{
+    0%{
+        opacity: 0;
+        bottom: -100px;
+        left: 0px;
+    }
+    25%{
+        opacity: 1;
+        left: -25px;
+        bottom:  -50px;
+    }
+    50%{
+        opacity: 1;
+        left: 10px;
+        bottom:  -20px;
+    }
+    100%{
+        opacity: 1;
+        left: -25px;
+        bottom: 10px;
+    }
+}

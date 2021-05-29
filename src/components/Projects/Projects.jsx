@@ -6,7 +6,7 @@ import { Terminal } from '../Terminal/Terminal'
 import { SkySurf } from './siteProjects/SkySurf/SkySurf'
 import { Morbiz } from './siteProjects/Morbiz/Morbiz'
 
-export function Projects() {
+export function Projects(props) {
     const [currentProject, setCurrentProject] = useState('')
     const [isTerminal, setIsTerminal] = useState(false)
     const upperRef = useRef(null)
@@ -17,10 +17,12 @@ export function Projects() {
     const openProject = (val) => {
         setCurrentProject(val)
         document.documentElement.style.overflowY = "hidden"
+        window.addEventListener("touchmove", wheelStopper, { passive: false });
         window.addEventListener("wheel", wheelStopper, { passive: false })
         chosenProjectRef.current.scrollIntoView({ behavior: 'smooth' });
         setTimeout(() => {
             window.removeEventListener("wheel", wheelStopper, { passive: false })
+            window.removeEventListener("touchmove", wheelStopper, { passive: false });
         }, 1200);
     }
 
@@ -31,11 +33,15 @@ export function Projects() {
     const wheelStopper = stopWheel.bind(this);
 
     const closeProject = () => {
+        window.addEventListener("touchmove", wheelStopper, { passive: false });
+        window.addEventListener("wheel", wheelStopper, { passive: false })
         setTimeout(() => {
             lowerRef.current.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center' });
-        }, 100);
+        }, 200);
         setTimeout(() => {
             document.documentElement.style.overflowY = "auto"
+            window.removeEventListener("wheel", wheelStopper, { passive: false })
+            window.removeEventListener("touchmove", wheelStopper, { passive: false });
         }, 1200);
         setCurrentProject('')
     }
@@ -50,6 +56,9 @@ export function Projects() {
         document.documentElement.style.overflowY = "auto"
     }
 
+    useEffect(() => {
+        props.setActiveProject(currentProject)
+    }, [props, currentProject])
 
     return (
         <div style={{ display: 'flex', flexDirection: "row", width: window.innerWidth * 2, alignItems: "center", justifyContent: 'center' }}>
