@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/MyPortfolio/static/css/main.af0cdd6a.chunk.css",
+    "main.css": "/MyPortfolio/static/css/main.cf75e6ef.chunk.css",
     "main.js": "/MyPortfolio/static/js/main.109af60d.chunk.js",
     "main.js.map": "/MyPortfolio/static/js/main.109af60d.chunk.js.map",
     "runtime-main.js": "/MyPortfolio/static/js/runtime-main.55286d6b.js",
@@ -8,7 +8,7 @@
     "static/js/2.2fb8e338.chunk.js": "/MyPortfolio/static/js/2.2fb8e338.chunk.js",
     "static/js/2.2fb8e338.chunk.js.map": "/MyPortfolio/static/js/2.2fb8e338.chunk.js.map",
     "index.html": "/MyPortfolio/index.html",
-    "static/css/main.af0cdd6a.chunk.css.map": "/MyPortfolio/static/css/main.af0cdd6a.chunk.css.map",
+    "static/css/main.cf75e6ef.chunk.css.map": "/MyPortfolio/static/css/main.cf75e6ef.chunk.css.map",
     "static/js/2.2fb8e338.chunk.js.LICENSE.txt": "/MyPortfolio/static/js/2.2fb8e338.chunk.js.LICENSE.txt",
     "static/media/headSection.css": "/MyPortfolio/static/media/Montserrat-Medium.e2d60bc4.ttf",
     "static/media/aboutStyles.css": "/MyPortfolio/static/media/ShareTechMono-Regular.8b302ac6.ttf",
@@ -18,7 +18,7 @@
   "entrypoints": [
     "static/js/runtime-main.55286d6b.js",
     "static/js/2.2fb8e338.chunk.js",
-    "static/css/main.af0cdd6a.chunk.css",
+    "static/css/main.cf75e6ef.chunk.css",
     "static/js/main.109af60d.chunk.js"
   ]
 }
