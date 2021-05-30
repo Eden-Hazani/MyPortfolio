@@ -58,7 +58,7 @@ export function SkySurfProject() {
                             <div style={{ marginLeft: '5%' }}>{lowerTextBody.sixthRow}</div>
                             <div style={{ marginLeft: '2%' }}>{lowerTextBody.seventhRow}</div>
                         </div>
-                        <LinkInformation links={'SkySurf'} />
+                        <LinkInformation links={'SKYSURF'} />
                     </div>
                 </div>
             </div>

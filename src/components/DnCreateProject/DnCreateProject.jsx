@@ -57,7 +57,7 @@ export function DnCreateProject() {
                             <div style={{ marginLeft: '5%' }}>{lowerTextBody.sixthRow}</div>
                             <div style={{ marginLeft: '2%' }}>{lowerTextBody.seventhRow}</div>
                         </div>
-                        <LinkInformation links={'DnCreate'} />
+                        <LinkInformation links={'DNCREATE'} />
                     </div>
                 </div>
             </div>

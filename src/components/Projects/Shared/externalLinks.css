@@ -11,19 +11,22 @@
 
 .externalLinkImg>p{
     font-family: Montserrat;
-    font-size: 5vw;
+    font-size: 1.5vw;
     color: white;
 }
 
 .logoStatic{
-    width: 5vw;
+    width: 3vw;
     height: auto;
     margin-bottom: 2vh;
 }
 
 @media screen and (max-width: 600px) {
     .logoStatic{
-        width: 10vw;
+        width: 10vw !important;
+    }
+    .externalLinkImg>p{
+        font-size: 6vw !important;
     }
   }
 

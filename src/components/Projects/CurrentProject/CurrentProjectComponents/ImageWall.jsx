@@ -1,5 +1,5 @@
 import { useRef } from 'react'
-import useOnScreen from '../../../../../hooks/useOnScreen';
+import useOnScreen from '../../../../hooks/useOnScreen';
 import './imageWall.css'
 
 export function ImageWall() {

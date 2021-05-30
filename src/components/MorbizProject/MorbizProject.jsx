@@ -53,7 +53,7 @@ export function MorbizProject() {
                             <div style={{ marginLeft: '5%' }}>{lowerTextBody.fourthRow}</div>
                             <div style={{ marginLeft: '2%' }}>{lowerTextBody.fifthRow}</div>
                         </div>
-                        <LinkInformation links={'Morbiz'} />
+                        <LinkInformation links={'MORBIZ'} />
                     </div>
                 </div>
             </div>

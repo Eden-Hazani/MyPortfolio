@@ -6,7 +6,7 @@ import { Projects } from './components/Projects/Projects';
 import { ContactMe } from './components/ContactMe/ContactMe';
 import { Footer } from './components/Footer/Footer';
 import { Menu } from './components/Menu/Menu';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 function App() {
   const about = useRef(null)
@@ -36,6 +36,9 @@ function App() {
 
   const wheelStopper = stopWheel.bind(this);
 
+  useEffect(() => {
+    console.log('%c ' + `The jester dragon has trapped me in the console log, it's kinda boring here...`, 'color: green; font-weight:bold')
+  }, [])
 
 
   return (

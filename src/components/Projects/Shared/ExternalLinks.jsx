@@ -11,7 +11,7 @@ export function ExternalLinks(props) {
             <div>
                 <div className="externalLinkImg" onClick={() => props.back()}>
                     <p>Back</p>
-                    <FaChevronRight size={'5vw'} color={'white'} />
+                    <FaChevronRight size={window.innerWidth > 600 ? '2vw' : '8vw'} color={'white'} />
                 </div>
                 {props.git && <div className="externalLinkImg" onClick={() => window.open(props.git, "_blank")}>
                     <img alt="logo" className={`logoStatic ${containerEquipped ? 'enterLogo' : 'leaveLogo'}`} src={`${process.env.PUBLIC_URL}/imgs/logos/gitHubWhite.svg`} />

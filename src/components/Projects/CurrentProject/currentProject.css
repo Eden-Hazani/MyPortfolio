@@ -9,13 +9,33 @@
     overflow-x: hidden;
 }
 
+.currentProjectImageContainer{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-left: auto;
+  margin-right: auto;
+  height: 95%;
+  width: 95%;
+  background-color: rgba(0, 0, 0, 0.527);
+  z-index: 50;
+  overflow-x: auto;
+}
+
 .dnCreateHeader{
   transform: scale(.8);
   opacity: 0;
+  z-index: 10;
+  padding-top: 2%;
 }
 
 
 @media screen and (max-width: 600px) {
+
+  .dnCreateFirstSection>div{
+    width: 100% !important;
+  }
   .dncreateGlassShard{
     width: 50% !important;
   }
@@ -83,6 +103,7 @@
   opacity: 0;
   width: 13%;
   height: auto;
+  z-index: 20;
 }
 
 .photoGalleryImageEnter{
@@ -159,11 +180,11 @@
 .wizardDragon{
   transform: rotate(-5deg);
   position: absolute;
-  bottom: -5%;
+  bottom: 0%;
   opacity: 0;
-  width: 50%;
-  height: 50%;
-  left: 30%;
+  width: 15vw;
+  height:auto;
+  right: 35%;
 }
 
 .enterWizardDragon{
@@ -203,7 +224,6 @@
 
 .dncreateImgContainer>div{
   transform: rotate(-5deg);
-  border-bottom: white 3px solid;
 }
 
 .dncreateGlassShardContainer{
@@ -268,9 +288,12 @@
   }
 }
 
+.dnCreateFirstSection>div{
+  width: 60vw;
+}
 
 
-.dnCreateFirstSection>p{
+.dnCreateFirstSection>div>p{
   margin-top: 20px;
   margin-bottom: 20px;
 }
@@ -278,14 +301,14 @@
 .dnCreateFirstSection{
     position: absolute;
     color: white;
-    font-size: 3.5vh;
+    font-size: 3.2vh;
     font-family: Montserrat;
     opacity: 0;
     margin-left: auto;
     margin-right: auto;
     left: 5%;
     right: 0;
-    top: 20%;
+    top: 12%;
     bottom: 0;
 }
 
@@ -389,10 +412,10 @@
 }
 
 
-.dnCreateHeader>p{
+.dnCreateHeader>div>p{
   font-family: papaya;
   font-size: 5vh;
-  text-shadow: -2px 3px 2px #F76C5E;
+  text-shadow: 0px 3px  #ffffff4f;
   color: white;
   text-align: center;
   margin-top: 10px;

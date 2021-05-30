@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import useOnScreen from '../../../../../hooks/useOnScreen'
+import useOnScreen from '../../../../hooks/useOnScreen'
 import './reviewWall.css'
 import { FaStar } from 'react-icons/fa'
 

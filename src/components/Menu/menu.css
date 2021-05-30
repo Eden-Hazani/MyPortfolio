@@ -61,7 +61,7 @@
 .innerMenuContainer>div>p{
     color: black;
     font-family: monoBold;
-    font-size: 2vh;
+    font-size: 2vw;
 }
 
 .aboutMeOption{
@@ -114,7 +114,7 @@
 .menuOptionText{
     color: black;
     font-family: monoBold;
-    font-size: 1.3vh;
+    font-size: .8vw;
 }
 
 @media screen and (max-width: 600px) {

@@ -1,10 +1,8 @@
 import { useEffect, useRef, useState } from 'react'
 import useOnScreen from '../../hooks/useOnScreen'
 import './projects.css'
-import { DnCreate } from './siteProjects/DnCreate/DnCreate'
 import { Terminal } from '../Terminal/Terminal'
-import { SkySurf } from './siteProjects/SkySurf/SkySurf'
-import { Morbiz } from './siteProjects/Morbiz/Morbiz'
+import { CurrentProject } from '../Projects/CurrentProject/CurrentProject'
 
 export function Projects(props) {
     const [currentProject, setCurrentProject] = useState('')
@@ -106,9 +104,9 @@ export function Projects(props) {
                 </svg>
             </div>
             <div ref={chosenProjectRef} className="chosenProjectContainer" style={{ width: window.innerWidth, height: window.innerHeight }}>
-                {currentProject === "DNCREATE" && <DnCreate closeProject={() => closeProject()} />}
-                {currentProject === "SKYSURF" && <SkySurf closeProject={() => closeProject()} />}
-                {currentProject === "MORBIZ" && <Morbiz closeProject={() => closeProject()} />}
+                {currentProject !== '' && <CurrentProject projectName={currentProject} closeProject={() => closeProject()} />}
+                {/* {currentProject === "SKYSURF" && <SkySurf closeProject={() => closeProject()} />}
+                {currentProject === "MORBIZ" && <Morbiz closeProject={() => closeProject()} />} */}
             </div>
         </div>
     )
