@@ -85,6 +85,36 @@ const projectJsxInfo = {
         </div>,
         reviewWall: false,
         imageWall: false
+    },
+    SWEETBASH: {
+        header: <div><p>For Anyone</p><p>With a sweet tooth</p></div>,
+        d20Dice: false,
+        headerDragon: 'chefDragon.svg',
+        mobileImgs: true,
+        mainText: <div>
+            <p>Sweet bash is a mobile game developed n React native.</p>
+            <p>I wanted to challenge myself and delve into the world of mobile games so I decided to develop Sweet bash</p>
+            <p>The main purpose of the game is to create sequences of matching candies and earn points</p>
+            <p>There is a chance for spacial item drops that can either help or harm the player</p>
+            <p>Developing this game has taught me much in the world of gestures and array indexing</p>
+        </div>,
+        firstImg: 'sweetBash/gameScreenGif.gif',
+        secondImg: 'sweetBash/losingGif.gif',
+        thirdImg: 'sweetBash/scoreBoardGif.gif',
+        firstImgWording: <div>
+            <p className="dncreatePicDesc">Smooth gameplay for matching candy</p>
+            <p className="dncreatePicDesc">made with React Native's PanResponder</p>
+        </div>,
+        secondImgWording: <div>
+            <p className="dncreatePicDesc">Limited reset-able timer</p>
+            <p className="dncreatePicDesc">You can lose if the timer runs out</p>
+        </div>,
+        thirdImgWording: <div>
+            <p className="dncreatePicDesc">Sweet highscore!</p>
+            <p className="dncreatePicDesc">All your scores are saved and viewable from the score menu</p>
+        </div>,
+        reviewWall: false,
+        imageWall: false
     }
 }
 

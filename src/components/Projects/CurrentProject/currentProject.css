@@ -1,13 +1,16 @@
-.dncreateMainContainer{
-    overflow-y: auto;
-    height: 100%;
+.currentProjectContainer{
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex: 1;
     position: relative;
     overflow-x: hidden;
+    width: 0%;
+    z-index: 50;
+    background-color: #34A0A4;
 }
+
+
 
 .currentProjectImageContainer{
   position: fixed;
@@ -177,15 +180,6 @@
   }
 }
 
-.wizardDragon{
-  transform: rotate(-5deg);
-  position: absolute;
-  bottom: 0%;
-  opacity: 0;
-  width: 15vw;
-  height:auto;
-  right: 35%;
-}
 
 .enterWizardDragon{
   animation: enterWizardDragon 1s forwards;
@@ -235,6 +229,17 @@
   min-height: 70%;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.wizardDragon{
+  transform: rotate(-5deg);
+  position: absolute;
+  bottom: 20%;
+  opacity: 0;
+  width: 15vw;
+  height:auto;
+  right: 15%;
+
 }
 
 .dncreateGlassShard{

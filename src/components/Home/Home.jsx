@@ -17,6 +17,7 @@ export function Home(props) {
         thirdRow: '',
         fourthRow: '',
         fifthRow: '',
+        sixthRow: ''
     })
 
 
@@ -38,7 +39,8 @@ export function Home(props) {
         await typeWriterButtonEffect('Project: DnCreate', 'flashBar', 30, 220, (val) => changeState(setLowerTextBody, 'secondRow', val), () => props.switch('DNCREATE'));
         await typeWriterButtonEffect('Project: SkySurf', 'flashBar', 30, 220, (val) => changeState(setLowerTextBody, 'thirdRow', val), () => props.switch('SKYSURF'));
         await typeWriterButtonEffect('Project: Morbiz', 'flashBar', 30, 220, (val) => changeState(setLowerTextBody, 'fourthRow', val), () => props.switch('MORBIZ'));
-        await typeWriterEffect('}', 'flashBar', 'txt', 30, 220, (val) => changeState(setLowerTextBody, 'fifthRow', val));
+        await typeWriterButtonEffect('Project: SweetBash', 'flashBar', 30, 220, (val) => changeState(setLowerTextBody, 'fifthRow', val), () => props.switch('SWEETBASH'));
+        await typeWriterEffect('}', 'flashBar', 'txt', 30, 220, (val) => changeState(setLowerTextBody, 'sixthRow', val));
         await typeWriterEffect("}", 'flashBar', 'mainHeader', 30, 220, (val) => changeState(setUpperTextBody, 'fourthRow', val), true);
 
     }
@@ -78,7 +80,11 @@ export function Home(props) {
                         <div >{lowerTextBody.fourthRow}</div>
                     </div>
                     <br />
-                    <div style={{ marginLeft: '2%' }}>{lowerTextBody.fifthRow}</div>
+                    <div className="dnCreateAboutContainer">
+                        <div >{lowerTextBody.fifthRow}</div>
+                    </div>
+                    <br />
+                    <div style={{ marginLeft: '2%' }}>{lowerTextBody.sixthRow}</div>
                     <br />
                 </div>
                 <br />

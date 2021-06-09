@@ -118,6 +118,12 @@
 }
 
 @media screen and (max-width: 600px) {
+    .innerMenuContainer>div>p{
+        font-size: 5vw;
+    }
+    .menuOptionText{
+        font-size: 2.5vw !important;
+    }
     .innerMenuContainer>div{
         width: 25vw !important;
         height: 25vw !important;

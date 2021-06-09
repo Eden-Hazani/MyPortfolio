@@ -22,7 +22,14 @@
             "img3": "imgs/morbizImgs/morbiz3.JPG",
             "img4": "imgs/morbizImgs/morbiz4.JPG",
             "gitLink": "https://github.com/Eden-Hazani/Morbiez",
-            "webLink": "https://eden-hazani.github.io/home"
+            "webLink": "https://eden-hazani.github.io/Morbiez"
+        },
+        "SWEETBASH": {
+            "img1": "imgs/sweetBash/gameScreen.svg",
+            "img2": "imgs/sweetBash/homeScreen.svg",
+            "img3": "imgs/sweetBash/loseScreen.svg",
+            "img4": "imgs/sweetBash/scoreBoard.svg",
+            "gitLink": "https://github.com/Eden-Hazani/SweetBash"
         }
     }
 }

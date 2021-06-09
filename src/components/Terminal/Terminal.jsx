@@ -9,6 +9,7 @@ import { SkySurfProject } from "../SkySurfProject/SkySurfProject";
 import { Home } from "../Home/Home";
 import { MorbizProject } from "../MorbizProject/MorbizProject";
 import { DnCreateProject } from "../DnCreateProject/DnCreateProject";
+import { SweetBashProject } from "../SweetBashProject/SweetBashProject";
 
 export function Terminal(props) {
     const [currentTerminal, setCurrentTerminal] = useState('TERMINAL')
@@ -45,9 +46,7 @@ export function Terminal(props) {
         <div ref={terminalRef} className={`terminal ${terminalStatus}`} style={{ height: window.innerHeight, backgroundImage: `url(${process.env.PUBLIC_URL}/imgs/backgrounds/pleaseStandBy.jpg)` }} >
             {turnOff ? <TurnOff closeTerminal={() => {
                 setTerminalStatus('terminalClosing')
-                setTimeout(() => {
-                    props.closeTerminal()
-                }, 1800);
+                props.closeTerminal()
             }} /> :
                 loading ? <LoadingScreen /> :
                     <div style={{ position: 'relative', height: window.innerHeight }}>
@@ -64,6 +63,7 @@ export function Terminal(props) {
                         {currentTerminal === 'DNCREATE' && <DnCreateProject />}
                         {currentTerminal === 'SKYSURF' && <SkySurfProject />}
                         {currentTerminal === 'MORBIZ' && <MorbizProject />}
+                        {currentTerminal === 'SWEETBASH' && <SweetBashProject />}
                     </div>
             }
 

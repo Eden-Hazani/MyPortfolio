@@ -1,109 +1,220 @@
 .projectMainContainer{
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     flex-direction: column;
     position: relative;
-    width: 50%;
     background-color: #34A0A4;
-    padding-bottom: 3%;
-}
-
-.chosenProjectContainer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.d20Dice{
     width: 100%;
-    height: 100%;
-    position: absolute;
-    margin-left: auto;
-    margin-right: auto;
-    left: -20%;
-    right: 0;
-    top: -90%;
-    opacity: 0;
-    transform: rotate(12deg);
 }
 
-.d20Container{
-    position: absolute;
-    width: 38%;
-    height: 89%;
-    margin-left: auto;
-    margin-right: auto;
-    left: -20%;
-    right: 0;
-    animation: d20Movement 1s infinite alternate;
-    animation-delay: .5s;
-}
-
-.dnCreateProjectContainer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    position: relative;
-    cursor: pointer;
-}
-
-.constructionDragon{
-    transform: scaleX(-1);
-    width: 20%;
-    height: 150%;
-    left: 8%;
-    position: relative;
-    padding-bottom: 10%;
-    opacity: 0;
-    
-   
-}
-
-.enterConstructionDragon{
-    animation: enterConstDragon 1s forwards;
-}
-
-.closeConstructionDragon{
-    animation: closeConstDragon 1s forwards;
-}
-
-.dncreateHeadLine>span{
+.projectMainHeadline{
     color: white;
-    font-size: 8vh;
+    font-size: 10vh;
+    text-align: center;
+    margin-top: 0px;
     font-family: monoBold;
 }
 
+.projectFatherContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.projectBox{
+    position: relative;
+    width: 45vw;
+    height: 45vh;
+    margin: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    cursor: pointer;
+}
+
+.projectHeader{
+    font-family: monoBold;
+    color: white;
+    font-size: 6vh;
+    text-align: center;
+    margin-top: 2vh;
+    margin-bottom: 0px;
+    padding-top: 10vh;
+}
+
+.projectCardImgMonitor{
+    max-width:50vw;
+    height: auto;
+    z-index: 20;
+    transform: translateY(-2%);
+}
+
+.projectCardImg{
+    max-width:13vw;
+    height: auto;
+    z-index: 20;
+    transform: translateY(-2%);
+}
+
+.projectCardBackImgMonitor{
+    max-width:25vw;
+    height: auto;
+    position: absolute;
+    border-radius: 5%;
+    border: 1px black solid;
+}
+
+.projectCardBackImg{
+    max-width:22%;
+    height: auto;
+    position: absolute;
+    border-radius: 5%;
+    border: 1px black solid;
+}
+
+.projectInnerContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+@media screen and (max-width: 1700px) {
+    .projectBox{
+        width: 15vw;
+        height: auto;
+    }
+    .projectCardImg{
+        max-width: 25vw;
+    }
+    .projectCardBackImg{
+        max-width: 20vw;
+    }
+    .projectHeader{
+        padding-top: 2vh;
+    }
+}
+
+
+
+
+.projectCardRightIOpen{animation: projectCardRightIOpen 1s forwards;}
+.projectCardRightIClose{animation: projectCardRightIClose 1s forwards;}
+
+.projectCardRightIIOpen{animation: projectCardRightIIOpen 1s forwards;}
+.projectCardRightIIClose{animation: projectCardRightIIClose 1s forwards;}
+
+.projectCardLeftIOpen{animation: projectCardLeftIOpen 1s forwards;}
+.projectCardLeftIClose{animation: projectCardLeftIClose 1s forwards;}
+
+.projectCardLeftIIOpen{animation: projectCardLeftIIOpen 1s forwards;}
+.projectCardLeftIIClose{animation: projectCardLeftIIClose 1s forwards;}
+
+
+
+
+@keyframes projectCardLeftIIOpen {
+    from{
+        transform: translateY(8%) translateX(0%) rotate(0deg);
+    }
+    to{
+        transform: translateY(15%) translateX(-155%) rotate(-20deg);
+    }
+}
+@keyframes projectCardLeftIIClose {
+    from{
+        transform: translateY(15%) translateX(-155%) rotate(-20deg);
+    }
+    to{
+        transform: translateY(8%) translateX(0%) rotate(0deg);
+    }
+}
+@keyframes projectCardLeftIOpen {
+    from{
+        z-index: 15;
+        transform: translateY(8%) translateX(0%) rotate(0deg);
+    }
+    to{
+        z-index: 15;
+        transform: translateY(8%) translateX(-85%) rotate(-12deg);
+    }
+}
+@keyframes projectCardLeftIClose {
+    from{
+        z-index: 15;
+        transform: translateY(8%) translateX(-85%) rotate(-12deg);
+    }
+    to{
+        z-index: 15;
+        transform: translateY(8%) translateX(0%) rotate(0deg);
+    }
+}
+@keyframes projectCardRightIOpen {
+    from{
+        z-index: 15;
+        transform: translateY(8%) translateX(0%) rotate(0deg);
+    }
+    to{
+        z-index: 15;
+        transform: translateY(8%) translateX(85%) rotate(12deg);
+    }
+}
+@keyframes projectCardRightIClose {
+    from{
+        z-index: 15;
+        transform: translateY(8%) translateX(85%) rotate(12deg);
+    }
+    to{
+        z-index: 15;
+        transform: translateY(8%) translateX(0%) rotate(0deg);
+    }
+}
+
+
+@keyframes projectCardRightIIOpen {
+    from{
+        transform: translateY(8%) translateX(0%) rotate(0deg);
+    }
+    to{
+        transform: translateY(15%) translateX(155%) rotate(20deg);
+    }
+}
+@keyframes projectCardRightIIClose {
+    from{
+        transform: translateY(15%) translateX(155%) rotate(20deg);
+    }
+    to{
+        transform: translateY(8%) translateX(0%) rotate(0deg);
+    }
+}
+
+
+
+
+
+
+
+
+
 @media screen and (max-width: 600px) {
-    .dncreateHeadLine>span{
-        font-size: 6vh;
-    }
-    .constructionDragon{
-        width: 25%;
-    }
-    .skySurfProjectContainer{
-        right: 10%;
-    }
-    .morbizProjectContainer{
-        left: 10%;
-    }
-    .skySurfHeadLine{
-        font-size: 6vh !important;
-    }
     .deceitDragon{
-        width: 60% !important;
-        top: -30% !important;
+        width:45% !important;
+        top: 8% !important;
+    }
+    .projectCardImgMonitor {
+        max-width: 75vw;
+    }
+    .projectCardBackImgMonitor{
+        max-width: 40vw;
     }
   }
   
 
-
-.dncreateHeadLine{
-    position: relative;
-    transform: scale(.8);
-    opacity: 0;
-}
 
 .deceitDragon{
     position: absolute;
@@ -141,253 +252,4 @@
     }
 }
 
-.enterDncreateHeadLine{
-    animation: openLearn 1s forwards;
-}
-.closeDnCreateHeadLine{
-    animation: closeLearn 1s forwards;
-}
 
-.dncreateColorify{
-    animation: orangeColorify .5s forwards;
-    animation-delay: 1s;
-}
-
-.dncreateRemoveColorify{
-    animation: orangeRemoveColorify 1s forwards;
-}
-
-.enterD20{
-    animation: enterD20 1s forwards;
-    animation-delay: 1s;
-
-}
-.closeD20{
-    animation: closeD20 1s forwards;
-
-}
-
-
-.skySurfHeadLine{
-    color: white;
-    font-size: 8vh;
-    font-family: monoBold;
-}
-
-.plane{
-    width: 90%;
-    height: 90%;
-    position: absolute;
-    padding-bottom: 5%;
-    margin-left: auto;
-    margin-right: auto;
-    left: 85%;
-    right: 0;
-    bottom: 30%;
-}
-
-.cloud{
-    width: 90%;
-    height: 90%;
-    position: absolute;
-    padding-bottom: 5%;
-    margin-left: auto;
-    margin-right: auto;
-    left: -100%;
-    right: 0;
-    bottom: 0%;
-    z-index: -1;
-}
-
-.skySurfProjectContainer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    position: relative;
-    cursor: pointer;
-}
-
-
-.enterSkySurfProject{
-    animation: enterSkySurf 1s forwards;
-}
-
-.closeSkySurfProject{
-    animation: closeSkySurf 1s forwards;
-}
-
-.skySurfMovement{
-    animation: skySurfMovement 1s infinite alternate;
-    animation-delay: 1s;
-    transform: scale(.96);
-    position: relative;
-}
-
-
-.dragonChef{
-    width: 90%;
-    height: 90%;
-    position: absolute;
-    padding-bottom: 5%;
-    margin-left: auto;
-    margin-right: auto;
-    right: 90%;
-    bottom: 20%;
-}
-
-.morbizProjectContainer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    position: relative;
-    cursor: pointer;
-    z-index: 20;
-}
-
-.burger{
-    width: 25%;
-    height: 50%;
-    position: absolute;
-    padding-bottom: 5%;
-    margin-left: auto;
-    margin-right: auto;
-    left: 85%;
-    bottom: 33%;
-    animation: burgerMovement 1s alternate infinite;
-}
-
-
-@keyframes burgerMovement{
-    from{
-        bottom: 33%;
-        transform: scale(.87);
-    }
-    to{
-        transform: scale(1);
-        bottom: 40%;
-    }
-}
-
-
-
-@keyframes d20Movement{
-    from{
-        top: 3%;
-        transform: scale(.87);
-    }
-    to{
-        transform: scale(1);
-        top: -10%;
-    }
-}
-
-
-@keyframes skySurfMovement{
-    from{
-      left: 0%;
-      transform: scale(.96);
-    }
-    to{
-        transform: scale(1);
-        left: 5%;
-    }
-}
-
-
-@keyframes enterSkySurf{
-    from{
-        transform: scale(.8);
-        opacity: 0;
-    }
-    to{
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-
-@keyframes closeSkySurf{
-    from{
-        transform: scale(1);
-        opacity: 1;
-    }
-    to{
-        transform: scale(.8);
-        opacity: 0;
-    }
-}
-
-
-
-
-@keyframes enterD20{
-    from{
-        top: -90%;
-        opacity: 0;
-    }
-    to{
-        top: -73%;
-        opacity: 1;
-    }
-}
-
-@keyframes closeD20{
-    from{
-        top: -73%;
-        opacity: 1;
-    }
-    to{
-        top: -90%;
-        opacity: 0;
-    }
-}
-
-
-
-
-@keyframes enterConstDragon{
-    from{
-        left: 8%;
-        opacity: 0;
-    }
-    to{
-        left: -5%;
-        opacity: 1;
-    }
-}
-
-@keyframes closeConstDragon{
-    from{
-        left: -5%;
-        opacity: 1;
-    }
-    to{
-        left: 8%;
-        opacity: 0;
-    }
-}
-
-
-
-
-
-
-@keyframes orangeRemoveColorify{
-    from{
-        color: #F76C5E;
-    }
-    to{
-        color: white ;
-    }
-}
-
-
-@keyframes orangeColorify{
-    from{
-        color: white;
-    }
-    to{
-        color: #F76C5E ;
-    }
-}

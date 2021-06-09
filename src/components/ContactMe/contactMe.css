@@ -45,10 +45,29 @@
 .leaveAboutMeDragon{animation: leaveAboutMeDragon 1s forwards;}
 
 .enterAboutMeHeadLine{
-    animation: enterSkySurf 1s forwards;
+    animation: enterTextLine 1s forwards;
     animation-delay: .8s;
 }
-.leaveAboutMeHeadLine{animation: closeSkySurf 1s forwards;}
+.leaveAboutMeHeadLine{animation: leaveTextLine 1s forwards;}
+
+@keyframes enterTextLine{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes leaveTextLine{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+
+
 
 @keyframes enterAboutMeDragon{
     from{
